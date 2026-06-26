@@ -1,0 +1,34 @@
+{
+  "won": {
+    "kicker": "DU HAST 2040 ERREICHT",
+    "title": "Die widerstandsfähige Stadt",
+    "emoji": "✅",
+    "theme": "positive",
+    "body": "Du hast 2040 erreicht, und die Stadt ist immer noch lebenswert. Es war nicht leicht – aber du hast bewiesen: Auf die Wissenschaft hören, klug investieren und die Menschen mitnehmen sind kein Widerspruch.",
+    "science": "Städte, die vor 2030 in Hitzeresilienz investierten, retten voraussichtlich pro Grad Erwärmung viermal mehr Leben als jene, die gewartet haben."
+  },
+  "lost-heat": {
+    "kicker": "DIE STADT IST ÜBERHITZT",
+    "title": "Die unbewohnbare Stadt",
+    "emoji": "🌡️",
+    "theme": "heat",
+    "body": "Die Sommer wurden unerträglich. Betriebe zogen weg, Schulen verkürzten das Schuljahr, und ältere Menschen wurden jeden Juli evakuiert.",
+    "science": "Über +4 °C Erwärmung überschreitet die sommerliche Feuchtkugeltemperatur regelmäßig die Grenze, ab der sich der menschliche Körper nicht mehr abkühlen kann – selbst im Schatten."
+  },
+  "lost-money": {
+    "kicker": "DIE KASSE IST LEER",
+    "title": "Die Sparspirale",
+    "emoji": "💰",
+    "theme": "money",
+    "body": "Der Stadt ging das Geld aus, um auf Hitzenotlagen zu reagieren. Jede Hitzewelle kostete Leben, weil das Budget für Kühlräume fehlte.",
+    "science": "Jeder Euro, der in Hitze-Anpassung gesteckt wird, spart schätzungsweise 6 Euro an Notfall- und Gesundheitskosten."
+  },
+  "lost-happiness": {
+    "kicker": "DIE MENSCHEN WENDEN SICH AB",
+    "title": "Politischer Zusammenbruch",
+    "emoji": "😶",
+    "theme": "happiness",
+    "body": "Die Bevölkerung verlor das Vertrauen. Eine populistische Opposition gewann die Wahl und kippte all deine Klimapolitik. Dein Fortschritt war in einer einzigen Amtszeit zurückgedreht.",
+    "science": "Klimaforscher nennen das das Problem der gesellschaftlichen Akzeptanz – selbst richtige Politik scheitert ohne das Vertrauen der Bevölkerung."
+  }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "park-maintenance",
+    "category": "green",
+    "situation": "Der neue Mühlenstraßen-Park ist ein Hit – aber die Pflegerechnung ist da und höher als gedacht.",
+    "advisor": {
+      "name": "Amara",
+      "role": "Stadtbaumpflegerin",
+      "quote": "Die Leute lieben ihn schon. Spar jetzt an der falschen Stelle, und in zwei Jahren ist es eine braune Fläche, der niemand traut."
+    },
+    "choices": {
+      "left": { "label": "Pflege zusammenstreichen", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
+      "right": { "label": "Richtig finanzieren", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Grüne Infrastruktur kühlt nur, wenn sie gepflegt wird. Vernachlässigte Parks verlieren schnell ihre Baumkronen – und ein toter Park beschädigt das Vertrauen in den nächsten.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  }
+]

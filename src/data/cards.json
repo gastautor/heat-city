@@ -1,0 +1,410 @@
+[
+  {
+    "id": "mill-street-park",
+    "category": "green",
+    "situation": "Den Parkplatz an der Mühlenstraße in einen Mini-Park verwandeln?",
+    "advisor": {
+      "name": "Marco, 16",
+      "role": "Sohn eines Fabrikarbeiters",
+      "quote": "Mein Papa parkt da vor seiner Schicht. Wenn du das wegnimmst – wo soll er dann hin?"
+    },
+    "choices": {
+      "left": { "label": "Parkplatz behalten", "effects": { "heat": 2, "money": 1, "happiness": 0 } },
+      "right": { "label": "Park bauen", "effects": { "heat": -2, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Ein einziger ausgewachsener Baum kühlt so viel wie zehn Klimaanlagen, die 20 Stunden laufen – durch Schatten und weil er Wasser verdunstet.",
+    "chain": { "left": null, "right": "park-maintenance" },
+    "trigger": null
+  },
+  {
+    "id": "cool-pavement",
+    "category": "surfaces",
+    "situation": "Die Hauptstraße muss neu asphaltiert werden. Schwarzer Asphalt oder heller, kühler Belag?",
+    "advisor": {
+      "name": "Dev",
+      "role": "Ladenbesitzer",
+      "quote": "Der kühle Belag kostet 30 % mehr. Das Geld steck ich lieber ins Krankenhaus."
+    },
+    "choices": {
+      "left": { "label": "Normaler Asphalt", "effects": { "heat": 2, "money": 1, "happiness": 0 } },
+      "right": { "label": "Heller Belag", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Dunkle Flächen werden an heißen Tagen bis zu 70 °C heiß und strahlen die Hitze noch Stunden nach Sonnenuntergang ab. Helle Flächen bleiben bis zu 30 °C kühler.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "buried-river",
+    "category": "water",
+    "situation": "Der unter der Altstadt verrohrte Fluss könnte wieder freigelegt werden.",
+    "advisor": {
+      "name": "Frau Köhler",
+      "role": "Stadtingenieurin",
+      "quote": "Den Fluss zurück an die Oberfläche zu holen kostet Millionen und drei Sommer voller Baustellen."
+    },
+    "choices": {
+      "left": { "label": "Verrohrt lassen", "effects": { "heat": 1, "money": 2, "happiness": 0 } },
+      "right": { "label": "Fluss freilegen", "effects": { "heat": -3, "money": -3, "happiness": 2 } }
+    },
+    "scienceBit": "Ein offener Fluss kann einen 300-m-Streifen um 2–3 °C kühlen. Seoul legte 2005 einen verrohrten Bach frei – heute ist es eine der kühlsten Gegenden der Stadt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "social-housing-heat",
+    "category": "buildings",
+    "situation": "Im Sozialbau am Nordtor melden Menschen 38 °C in ihren Wohnungen.",
+    "advisor": {
+      "name": "Sofia",
+      "role": "Aktivistin für Wohnrechte",
+      "quote": "Das sind die verletzlichsten Menschen der Stadt. Wir handeln jetzt – oder diesen Sommer stirbt jemand."
+    },
+    "choices": {
+      "left": { "label": "Ventilatoren schicken", "effects": { "heat": 0, "money": -1, "happiness": 1 } },
+      "right": { "label": "Komplett sanieren", "effects": { "heat": -2, "money": -3, "happiness": 3 } }
+    },
+    "scienceBit": "Schlecht belüftete Wohnungen können bei einer Hitzewelle 8–10 °C heißer sein als draußen. Alte und sehr junge Menschen trifft es am härtesten – man nennt das die Hitze-Gerechtigkeitslücke.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "schools-heatwave",
+    "category": "crisis",
+    "situation": "Mitten im Schuljahr kommt eine Rekord-Hitzewelle. Sollen die Schulen schließen?",
+    "advisor": {
+      "name": "Lena",
+      "role": "Leiterin des Schulnetzwerks",
+      "quote": "Schließen wir, stehen berufstätige Eltern allein da. Bleiben sie offen, kippen die Kinder im Unterricht um."
+    },
+    "choices": {
+      "left": { "label": "Schulen offen lassen", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Notfall-Schließung", "effects": { "heat": 0, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Kinder überhitzen schneller als Erwachsene – sie produzieren im Verhältnis zur Körpergröße mehr Wärme und schwitzen weniger effizient.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "street-trees",
+    "category": "green",
+    "situation": "Die Kämmerei will das Budget für Straßenbäume halbieren.",
+    "advisor": {
+      "name": "Amara",
+      "role": "Stadtbaumpflegerin",
+      "quote": "Bäume, die wir dieses Jahr nicht pflanzen, spenden 30 Jahre lang niemandem Schatten. Das ist eine Entscheidung über 2055."
+    },
+    "choices": {
+      "left": { "label": "Budget kürzen", "effects": { "heat": 2, "money": 2, "happiness": -1 } },
+      "right": { "label": "Mehr pflanzen", "effects": { "heat": -2, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Eine Straße mit durchgehendem Baumdach kann mittags 5 °C kühler sein als eine kahle Straße einen Block weiter.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "white-roofs",
+    "category": "surfaces",
+    "situation": "Ein Förderprogramm könnte im Industriegebiet Flachdächer weiß streichen lassen.",
+    "advisor": {
+      "name": "Tomas",
+      "role": "Lagerhausbesitzer",
+      "quote": "Mein Dach weiß streichen? Gern – wenn die Stadt zahlt. Meine Marge ist hauchdünn."
+    },
+    "choices": {
+      "left": { "label": "Programm streichen", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Weiße Dächer fördern", "effects": { "heat": -2, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Ein weißes Dach reflektiert bis zu 80 % des Sonnenlichts, ein schwarzes unter 20 %. Ganze Viertel mit kühlen Dächern senken messbar die Lufttemperatur.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "splash-fountains",
+    "category": "water",
+    "situation": "Der alte Marktplatz könnte Wasserspiele für den Sommer bekommen – aber die Region leidet unter Dürre.",
+    "advisor": {
+      "name": "Bea",
+      "role": "Leiterin der Wasserwerke",
+      "quote": "Trinkwasser während einer Dürre in die Luft zu sprühen – das ist eine Schlagzeile, die nur auf ihren Moment wartet."
+    },
+    "choices": {
+      "left": { "label": "Keine Wasserspiele", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
+      "right": { "label": "Kreislauf-Wasserspiele", "effects": { "heat": -1, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Wasserspiele im Kreislauf verbrauchen nur einen Bruchteil des Wassers von Brunnen, die ins Abwasser laufen – und bieten an Hitzetagen trotzdem Abkühlung.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "cooling-centres",
+    "category": "buildings",
+    "situation": "Sollen in den Büchereien jeden Sommer klimatisierte Kühlräume öffnen?",
+    "advisor": {
+      "name": "Dr. Okafor",
+      "role": "Amtsärztin",
+      "quote": "Ein kühler Raum mit Stuhl und Wasser ist die billigste Art, Hitzetote zu verhindern. Punkt."
+    },
+    "choices": {
+      "left": { "label": "Bestehende Räume nutzen", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
+      "right": { "label": "Kühlräume öffnen", "effects": { "heat": 0, "money": -2, "happiness": 3 } }
+    },
+    "scienceBit": "Bei der Hitzewelle 2003 in Europa waren die meisten der 70.000 zusätzlichen Toten allein zu Hause. Zugängliche kühle Orte retten Leben.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "ac-rebate",
+    "category": "buildings",
+    "situation": "Ein populistischer Stadtrat fordert kostenlose Klimaanlagen für jeden Haushalt.",
+    "advisor": {
+      "name": "Stadtrat Reyes",
+      "role": "Oppositionsführer",
+      "quote": "Die Leute wollen jetzt kühl haben. Gib ihnen Klimaanlagen, und sie danken dir an der Wahlurne."
+    },
+    "choices": {
+      "left": { "label": "Lieber Wärmepumpen", "effects": { "heat": -1, "money": -2, "happiness": 1 } },
+      "right": { "label": "Klimaanlagen für alle", "effects": { "heat": 3, "money": -2, "happiness": 3 } }
+    },
+    "scienceBit": "Klimaanlagen kühlen drinnen, pusten die Wärme aber nach draußen – dicht genutzt heben sie die nächtliche Straßentemperatur um über 1 °C und verschärfen das Problem für alle.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "bus-shelters",
+    "category": "surfaces",
+    "situation": "Die Bushaltestellen haben keinen Schatten. Fahrgäste warten bis zu 20 Minuten in der prallen Sonne.",
+    "advisor": {
+      "name": "Grace",
+      "role": "Gewerkschafterin im Nahverkehr",
+      "quote": "Meine Fahrer sehen, wie ältere Fahrgäste an den Haltestellen fast zusammenbrechen. Ein Dach ist kein Luxus."
+    },
+    "choices": {
+      "left": { "label": "So lassen", "effects": { "heat": 1, "money": 1, "happiness": -2 } },
+      "right": { "label": "Begrünte Haltestellen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Schatten kann die gefühlte Hitze für den Körper um 10–15 °C senken, selbst wenn die Lufttemperatur gleich bleibt. Das ist eine der wirksamsten und günstigsten Maßnahmen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "parking-lot-solar",
+    "category": "green",
+    "situation": "Den Stadion-Parkplatz mit Solardächern überbauen, die Autos beschatten und Strom liefern?",
+    "advisor": {
+      "name": "Idris",
+      "role": "Gründer einer Energiegenossenschaft",
+      "quote": "Autos beschatten, 3.000 Haushalte mit Strom versorgen – und in acht Jahren haben sich die Module bezahlt gemacht."
+    },
+    "choices": {
+      "left": { "label": "Erstmal nicht", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Solardächer bauen", "effects": { "heat": -2, "money": -3, "happiness": 2 } }
+    },
+    "scienceBit": "Solardächer beschatten Asphalt, der sonst 60 °C erreicht, und erzeugen sauberen Strom genau dann, wenn der Klimaanlagen-Bedarf am höchsten ist.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "wetland-restore",
+    "category": "water",
+    "situation": "Ein trockengelegtes Moor am Stadtrand könnte als Feuchtgebiet wiederhergestellt werden.",
+    "advisor": {
+      "name": "Nadia",
+      "role": "Feuchtgebiets-Ökologin",
+      "quote": "Stell es wieder her, und du bekommst Hochwasserschutz, Kühlung und Vogelgezwitscher. Pflastere es zu, und du bekommst eine Hitzefalle."
+    },
+    "choices": {
+      "left": { "label": "An Investor verkaufen", "effects": { "heat": 2, "money": 3, "happiness": -1 } },
+      "right": { "label": "Moor renaturieren", "effects": { "heat": -3, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Feuchtgebiete wirken wie natürliche Klimaanlagen und Schwämme – sie kühlen die Luft durch Verdunstung und saugen Regen auf, der sonst Straßen überflutet.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "festival-power",
+    "category": "crisis",
+    "situation": "Das Sommerfestival ist gebucht, aber das Stromnetz ächzt unter dem Rekord-Klimaanlagen-Bedarf.",
+    "advisor": {
+      "name": "Priya",
+      "role": "Veranstaltungsleiterin",
+      "quote": "Absagen heißt, die Tourismussaison verlieren. Durchziehen heißt, einen Blackout mitten in der Hitzewelle riskieren."
+    },
+    "choices": {
+      "left": { "label": "Kleiner fahren", "effects": { "heat": 0, "money": -1, "happiness": -1 } },
+      "right": { "label": "Volles Festival", "effects": { "heat": 1, "money": 2, "happiness": 1 } }
+    },
+    "scienceBit": "Hitzewellen und Strom-Spitzenbedarf treffen oft zusammen – genau dann, wenn Netze am ehesten zusammenbrechen und Menschen ohne Kühlung dastehen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "green-walls",
+    "category": "buildings",
+    "situation": "Die Betonfassade des Rathauses mit lebenden Pflanzenwänden nachrüsten?",
+    "advisor": {
+      "name": "Hugo",
+      "role": "Stadtarchitekt",
+      "quote": "Es ist schön und kühlt das Gebäude. Es ist aber auch eine Wartungsrechnung, die nie aufhört."
+    },
+    "choices": {
+      "left": { "label": "Nur neu streichen", "effects": { "heat": 1, "money": 0, "happiness": 0 } },
+      "right": { "label": "Pflanzenwände bauen", "effects": { "heat": -1, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Begrünte Fassaden beschatten und dämmen Wände, senken die aufgenommene Hitze und reduzieren den Kühlbedarf eines Gebäudes um bis zu ein Drittel.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "asphalt-playground",
+    "category": "surfaces",
+    "situation": "Schulhöfe aus blankem Asphalt sind mittags zu heiß. Aufreißen und begrünen?",
+    "advisor": {
+      "name": "Herr Bauer",
+      "role": "Grundschulleiter",
+      "quote": "Um elf ist der Hof unbenutzbar. Die Kinder essen zusammengepfercht drinnen zu Mittag."
+    },
+    "choices": {
+      "left": { "label": "Asphalt behalten", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
+      "right": { "label": "Aufreißen, begrünen", "effects": { "heat": -2, "money": -2, "happiness": 3 } }
+    },
+    "scienceBit": "Asphalt aufreißen und durch Erde und Bäume ersetzen – „Entsiegeln“ – kann die Oberflächentemperatur um über 20 °C senken und lässt Regen versickern statt abfließen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "night-shift",
+    "category": "crisis",
+    "situation": "Bauarbeiter brechen in der Nachmittagssonne zusammen. Ein Arbeitsverbot über Mittag verhängen?",
+    "advisor": {
+      "name": "Carlos",
+      "role": "Bauleiter",
+      "quote": "Ein Mittagsverbot hält meine Leute am Leben. Es heißt aber auch: Projekte laufen länger und teurer."
+    },
+    "choices": {
+      "left": { "label": "Kein Verbot", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Mittagsverbot draußen", "effects": { "heat": 0, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Mehrere Länder verbieten im Sommer Outdoor-Arbeit in den heißesten Nachmittagsstunden – Hitzestress ist einer der am schnellsten wachsenden Gefahren am Arbeitsplatz.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "reflective-paint-fail",
+    "category": "surfaces",
+    "situation": "Eine Firma bietet billige reflektierende Straßenfarbe an – aber sie ist ungetestet und hält vielleicht keine Saison.",
+    "advisor": {
+      "name": "Yusuf",
+      "role": "Einkaufsleiter",
+      "quote": "Halber Preis vom erprobten Produkt. Wenn's klappt, bist du der Held. Wenn's abblättert, war alles umsonst."
+    },
+    "choices": {
+      "left": { "label": "Erprobtes Produkt", "effects": { "heat": -2, "money": -2, "happiness": 1 } },
+      "right": { "label": "Auf billig zocken", "effects": { "heat": 1, "money": 1, "happiness": -1 } }
+    },
+    "scienceBit": "Billige Kühlbeschichtungen versagen oft binnen eines Jahres und kosten am Ende mehr als haltbare Produkte. Schlecht gemachte Anpassung untergräbt das Vertrauen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "community-gardens",
+    "category": "green",
+    "situation": "Eine Brachfläche könnte zu Schrebergärten der Anwohner werden – oder an einen Investor gehen.",
+    "advisor": {
+      "name": "Frau Adeyemi",
+      "role": "Vorsitzende des Nachbarschaftsvereins",
+      "quote": "Wir pflegen ihn selbst. Gib uns einfach das Land statt noch einem Glasturm, der die Straße aufheizt."
+    },
+    "choices": {
+      "left": { "label": "An Investor verkaufen", "effects": { "heat": 2, "money": 3, "happiness": -2 } },
+      "right": { "label": "Gärten genehmigen", "effects": { "heat": -1, "money": -1, "happiness": 3 } }
+    },
+    "scienceBit": "Gemeinschaftsgärten kühlen ihren Block, sparen Transportwege und schaffen den Zusammenhalt, der Menschen bei Hitzenotlagen aufeinander achten lässt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "rain-gardens",
+    "category": "water",
+    "situation": "Betonierte Straßenabläufe durch bepflanzte Versickerungsbeete ersetzen, die Starkregen aufsaugen?",
+    "advisor": {
+      "name": "Bea",
+      "role": "Leiterin der Wasserwerke",
+      "quote": "Sie fangen die Sturzfluten auf und sehen toll aus – aber sie müssen gejätet werden, und Budgets hassen Jäten."
+    },
+    "choices": {
+      "left": { "label": "Beton behalten", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Versickerungsbeete", "effects": { "heat": -2, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Versickerungsbeete kühlen und reinigen Regenwasser und füllen das Grundwasser auf – sie machen aus denselben Regengüssen, die Straßen fluten, eine Ressource.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "data-centre",
+    "category": "crisis",
+    "situation": "Eine Tech-Firma will mitten in der Stadt ein Rechenzentrum bauen – Jobs und Steuern, aber riesige Abwärme.",
+    "advisor": {
+      "name": "Stadtrat Reyes",
+      "role": "Oppositionsführer",
+      "quote": "Fünfhundert Jobs. Sag das ab, und die nächste Wahl schreibt sich von selbst – für mich."
+    },
+    "choices": {
+      "left": { "label": "Abwärme-Nutzung auflagen", "effects": { "heat": -1, "money": 1, "happiness": 1 } },
+      "right": { "label": "So genehmigen", "effects": { "heat": 3, "money": 3, "happiness": 0 } }
+    },
+    "scienceBit": "Rechenzentren stoßen enorme Abwärme aus. Städte wie Stockholm leiten sie ins Fernwärmenetz – aus einem Hitzeproblem wird Winterwärme für Wohnungen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "shade-sails",
+    "category": "surfaces",
+    "situation": "Die Markthändler wollen vor dem Hochsommer Sonnensegel über dem Markt.",
+    "advisor": {
+      "name": "Fatima",
+      "role": "Sprecherin der Markthändler",
+      "quote": "Kunden bleiben nicht in der Sonne stehen. Beschatte uns, und wir verkaufen alle mehr – das rechnet sich."
+    },
+    "choices": {
+      "left": { "label": "Sollen warten", "effects": { "heat": 1, "money": 1, "happiness": -2 } },
+      "right": { "label": "Sonnensegel spannen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Leichte Schattenstrukturen sind schnell, günstig und rückbaubar – ideal, um Märkte und Spielplätze zu schützen, während langsamere grüne Infrastruktur erst wächst.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "elderly-checkin",
+    "category": "buildings",
+    "situation": "Ein Freiwilligenprogramm finanzieren, das bei Hitzewellen nach einsamen älteren Menschen schaut?",
+    "advisor": {
+      "name": "Dr. Okafor",
+      "role": "Amtsärztin",
+      "quote": "Die meisten Hitzetoten sind allein zu Hause. Ein Klopfen an der Tür ist die billigste Medizin, die wir haben."
+    },
+    "choices": {
+      "left": { "label": "Den Familien überlassen", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
+      "right": { "label": "Besuchsdienst finanzieren", "effects": { "heat": 0, "money": -1, "happiness": 3 } }
+    },
+    "scienceBit": "Soziale Isolation ist einer der stärksten Vorboten dafür, an einer Hitzewelle zu sterben. Einfache Buddy- und Besuchssysteme senken dieses Risiko drastisch.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "river-swim",
+    "category": "water",
+    "situation": "Anwohner wünschen sich eine beaufsichtigte Badestelle am sauber gewordenen Fluss.",
+    "advisor": {
+      "name": "Nadia",
+      "role": "Feuchtgebiets-Ökologin",
+      "quote": "Das Wasser ist jetzt sauber genug. Rettungsschwimmer und Stufen kosten Geld, aber die Stadt fragt seit Jahren danach."
+    },
+    "choices": {
+      "left": { "label": "Abgesperrt lassen", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Badestelle eröffnen", "effects": { "heat": -1, "money": -1, "happiness": 3 } }
+    },
+    "scienceBit": "Sicherer Zugang zu offenem Wasser bringt an den heißesten Tagen Erleichterung – Städte, die ihre Flüsse zum Baden zurückgewinnen, berichten von deutlich mehr Lebensqualität.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  }
+]

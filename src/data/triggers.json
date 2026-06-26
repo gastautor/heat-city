@@ -1,0 +1,53 @@
+[
+  {
+    "id": "trigger-heatwave",
+    "category": "crisis",
+    "situation": "Eine brutale Hitzewelle ist da – früher als erwartet. Heute Nacht füllt sich das Krankenhaus mit Hitzschlag-Fällen.",
+    "advisor": {
+      "name": "Dr. Okafor",
+      "role": "Amtsärztin",
+      "quote": "Das ist der Notfall, vor dem wir gewarnt haben. Ich brauche für die nächsten 72 Stunden freie Hand."
+    },
+    "choices": {
+      "left": { "label": "Aussitzen", "effects": { "heat": 1, "money": 1, "happiness": -3 } },
+      "right": { "label": "Voller Notfalleinsatz", "effects": { "heat": -1, "money": -3, "happiness": 2 } }
+    },
+    "scienceBit": "Über +4 °C Erwärmung kann die sommerliche Feuchtkugeltemperatur die Grenze überschreiten, ab der sich der menschliche Körper nicht mehr abkühlen kann – selbst ruhend im Schatten.",
+    "chain": { "left": null, "right": null },
+    "trigger": { "metric": "heat", "above": 75 }
+  },
+  {
+    "id": "trigger-austerity",
+    "category": "crisis",
+    "situation": "Die Kasse ist fast leer. Der Finanzausschuss verlangt sofortige Kürzungen, um den Haushalt auszugleichen.",
+    "advisor": {
+      "name": "Yusuf",
+      "role": "Einkaufsleiter",
+      "quote": "Wir haben keinen Spielraum mehr. Entweder wir kürzen jetzt ein Programm, oder nächsten Monat fehlt das Gehalt."
+    },
+    "choices": {
+      "left": { "label": "Grünprogramme streichen", "effects": { "heat": 2, "money": 3, "happiness": -2 } },
+      "right": { "label": "Klima-Notfallanleihe", "effects": { "heat": -1, "money": 2, "happiness": -1 } }
+    },
+    "scienceBit": "Jeder Euro, der in Hitze-Anpassung gesteckt wird, spart schätzungsweise rund 6 Euro an Notfall- und Gesundheitskosten.",
+    "chain": { "left": null, "right": null },
+    "trigger": { "metric": "money", "below": 20 }
+  },
+  {
+    "id": "trigger-protest",
+    "category": "crisis",
+    "situation": "Tausende ziehen zum Rathaus. Sie sagen, deine Klimapolitik ignoriere die ganz normalen Leute und ihre Rechnungen.",
+    "advisor": {
+      "name": "Stadtrat Reyes",
+      "role": "Oppositionsführer",
+      "quote": "Heute gehört mir die Straße, Bürgermeister*in. Gib ihnen etwas Echtes – oder gib ihnen meine Wahl."
+    },
+    "choices": {
+      "left": { "label": "Kurs halten", "effects": { "heat": -1, "money": 0, "happiness": -2 } },
+      "right": { "label": "Entlastungspaket", "effects": { "heat": 1, "money": -3, "happiness": 3 } }
+    },
+    "scienceBit": "Klimaforscher nennen das das Problem der gesellschaftlichen Akzeptanz – selbst richtige Politik scheitert ohne das Vertrauen der Bevölkerung.",
+    "chain": { "left": null, "right": null },
+    "trigger": { "metric": "happiness", "below": 20 }
+  }
+]
