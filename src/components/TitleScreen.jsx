@@ -29,8 +29,7 @@ export default function TitleScreen() {
       </div>
       <div className="title-bottom">
         <p className="title-lede">
-          Du bist Bürgermeister*in. Die Stadt wird jedes Jahr heißer. Jede Entscheidung hält sie am
-          Leben — oder eben nicht.
+          Du bist Bürgermeister*in. Die Stadt wird jedes Jahr heißer. Jede Entscheidung trägt dazu bei, wie lebenswert sie bleibt.
         </p>
         <button className="title-start" onClick={initGame}>
           Tippen zum Starten →
