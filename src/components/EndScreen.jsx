@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react'
+import { toBlob } from 'html-to-image'
 import { useGameStore } from '../store/gameStore'
 import endings from '../data/endings.json'
 import { formatTemp } from '../game/metricEngine'
@@ -11,27 +13,63 @@ export default function EndScreen() {
   const history = useGameStore((s) => s.history)
   const initGame = useGameStore((s) => s.initGame)
 
+  const endRef = useRef(null)
+  const [sharing, setSharing] = useState(false)
+
   const ending = endings[gameStatus] || endings.won
   const lastThree = history.slice(-3).reverse()
 
   const onShare = async () => {
+    if (sharing || !endRef.current) return
+    setSharing(true)
     const text = `HEAT CITY — ${ending.title} ${ending.emoji}\nEndstand: ${formatTemp(
       heat
     )} · Geld ${Math.round(money)}% · Stimmung ${Math.round(happiness)}%`
     try {
-      if (navigator.share) {
-        await navigator.share({ title: 'Heat City', text })
-      } else if (navigator.clipboard) {
-        await navigator.clipboard.writeText(text)
-        alert('Result copied to clipboard')
+      const node = endRef.current
+      // Capture the full overview, including anything scrolled out of view,
+      // but leave the action buttons out of the picture.
+      const blob = await toBlob(node, {
+        pixelRatio: 2,
+        width: node.scrollWidth,
+        height: node.scrollHeight,
+        style: { height: 'auto', overflow: 'visible' },
+        filter: (n) => !(n.classList && n.classList.contains('end-actions')),
+      })
+      if (!blob) throw new Error('capture failed')
+      const file = new File([blob], 'heat-city.png', { type: 'image/png' })
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: 'Heat City', text })
+      } else {
+        // No file sharing (e.g. desktop browser) — download the picture instead.
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = 'heat-city.png'
+        a.click()
+        URL.revokeObjectURL(url)
       }
-    } catch {
-      /* user dismissed share sheet — ignore */
+    } catch (err) {
+      if (err && err.name === 'AbortError') return // user dismissed share sheet
+      // Image capture failed — fall back to sharing the result as text.
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: 'Heat City', text })
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(text)
+          alert('Ergebnis in die Zwischenablage kopiert')
+        }
+      } catch {
+        /* user dismissed share sheet — ignore */
+      }
+    } finally {
+      setSharing(false)
     }
   }
 
   return (
-    <div className={`end theme-${ending.theme}`}>
+    <div className={`end theme-${ending.theme}`} ref={endRef}>
       <div className="end-emoji">{ending.emoji}</div>
       <div className="end-kicker">{ending.kicker}</div>
       <h1 className="end-title">{ending.title}</h1>
@@ -84,8 +122,8 @@ export default function EndScreen() {
         <button className="btn btn-primary" onClick={initGame}>
           Nochmal spielen
         </button>
-        <button className="btn btn-outline" onClick={onShare}>
-          Teilen
+        <button className="btn btn-outline" onClick={onShare} disabled={sharing}>
+          {sharing ? 'Erstelle Bild…' : 'Teilen'}
         </button>
       </div>
     </div>
