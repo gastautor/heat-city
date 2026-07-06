@@ -5,11 +5,13 @@
 //   heat      > 75 → 'trigger-heatwave'
 //   money     < 20 → 'trigger-austerity'
 //   happiness < 20 → 'trigger-protest'
+//   happiness > 85 → 'trigger-gentrification' (success has side effects)
 
 const THRESHOLDS = [
   { id: 'trigger-heatwave', test: (s) => s.heat > 75 },
   { id: 'trigger-austerity', test: (s) => s.money < 20 },
   { id: 'trigger-protest', test: (s) => s.happiness < 20 },
+  { id: 'trigger-gentrification', test: (s) => s.happiness > 85 },
 ]
 
 // Returns a trigger card id to inject, or null. `playedTriggers` is the list of

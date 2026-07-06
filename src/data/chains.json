@@ -15,5 +15,90 @@
     "scienceBit": "Grüne Infrastruktur kühlt nur, wenn sie gepflegt wird. Vernachlässigte Parks verlieren schnell ihre Baumkronen – und ein toter Park beschädigt das Vertrauen in den nächsten.",
     "chain": { "left": null, "right": null },
     "trigger": null
+  },
+  {
+    "id": "oldtown-verdict",
+    "category": "surfaces",
+    "situation": "Ein Jahr autofreie Altstadt: Die Zahlen sind da – die Straßencafés melden Rekordumsätze.",
+    "advisor": {
+      "name": "Dev",
+      "role": "Ladenbesitzer",
+      "quote": "Okay, ich geb's zu: So viele Leute wie diesen Sommer saßen hier noch nie. Trotzdem hatte ich irgendwie recht."
+    },
+    "choices": {
+      "left": { "label": "Autos zurücklassen", "effects": { "heat": 2, "money": 0, "happiness": -1 } },
+      "right": { "label": "Dauerhaft autofrei", "effects": { "heat": -1, "money": 1, "happiness": 2 } }
+    },
+    "scienceBit": "Studien aus Wien, Paris und Barcelona zeigen: Nach anfänglichem Protest steigt die Zustimmung zu autofreien Zonen deutlich – Menschen mögen, was sie erleben, nicht, was sie sich vorstellen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "boulevard-opening",
+    "category": "green",
+    "situation": "Die grüne Allee ist fertig. Zur Eröffnung kommen mehr Menschen als zum Sommerfestival.",
+    "advisor": {
+      "name": "Hugo",
+      "role": "Stadtarchitekt",
+      "quote": "Gestern hat sich eine Frau bei mir bedankt, die letztes Jahr eine Beschwerde geschrieben hat. So läuft das."
+    },
+    "choices": {
+      "left": { "label": "Schlicht eröffnen", "effects": { "heat": -1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Großes Eröffnungsfest", "effects": { "heat": -1, "money": -1, "happiness": 3 } }
+    },
+    "scienceBit": "Sichtbare Erfolge sind Kapital für Klimapolitik: Wer Abkühlung selbst erlebt hat, unterstützt die nächste Maßnahme eher – Forschende nennen das den Demonstrationseffekt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "reservoir-crisis",
+    "category": "water",
+    "situation": "Die Talsperre fällt unter den kritischen Pegel. Trinkwasser muss jetzt teuer per Tanklaster aus der Nachbarregion kommen.",
+    "advisor": {
+      "name": "Bea",
+      "role": "Leiterin der Wasserwerke",
+      "quote": "Ich hab's gesagt. Jetzt bezahlen wir die Rasensprenger vom Juli mit dem Notbudget vom September."
+    },
+    "choices": {
+      "left": { "label": "Tanklaster bezahlen", "effects": { "heat": 0, "money": -3, "happiness": -1 } },
+      "right": { "label": "Jetzt hart rationieren", "effects": { "heat": 0, "money": -1, "happiness": -3 } }
+    },
+    "scienceBit": "Notfall-Wasserversorgung kostet ein Vielfaches der Vorsorge. Kapstadt entging 2018 nur durch drastische Rationierung dem „Day Zero“ – dem Tag, an dem die Hähne trocken bleiben.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tree-petition",
+    "category": "green",
+    "situation": "Fotos der gefällten Lindenallee gehen viral. Die Petition „Rettet unsere Schattenbäume“ hat über Nacht 20.000 Unterschriften.",
+    "advisor": {
+      "name": "Frau Adeyemi",
+      "role": "Vorsitzende des Nachbarschaftsvereins",
+      "quote": "Die Hälfte der Unterzeichner wollte letzten Monat noch fällen lassen. Aber der Anblick der Stümpfe hat etwas verändert."
+    },
+    "choices": {
+      "left": { "label": "Aussitzen", "effects": { "heat": 0, "money": 0, "happiness": -2 } },
+      "right": { "label": "Baumschutzsatzung erlassen", "effects": { "heat": -1, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Städte mit Baumschutzsatzung verlieren deutlich weniger Kronenfläche – bestehende Bäume zu schützen ist billiger als jede Neupflanzung.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "grid-failure",
+    "category": "crisis",
+    "situation": "Um 15:40 fällt das Netz aus. Drei Stunden ohne Strom am heißesten Tag des Jahres – Krankenhaus auf Notstrom, U-Bahn evakuiert.",
+    "advisor": {
+      "name": "Jonas",
+      "role": "Netzbetreiber",
+      "quote": "Ich habe dich gewarnt. Jetzt reden wir nicht mehr über Leuchtreklame, sondern über Beatmungsgeräte."
+    },
+    "choices": {
+      "left": { "label": "Aussitzen, beschwichtigen", "effects": { "heat": 0, "money": -1, "happiness": -3 } },
+      "right": { "label": "Notstrom-Hubs aufbauen", "effects": { "heat": 0, "money": -2, "happiness": -1 } }
+    },
+    "scienceBit": "Ein Blackout während einer Hitzewelle trifft eine Stadt doppelt: Die Kühlung fällt genau dann aus, wenn sie am meisten gebraucht wird. Vorsorge ist billiger als jede Krisenreaktion.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
   }
 ]

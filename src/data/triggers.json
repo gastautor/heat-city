@@ -49,5 +49,22 @@
     "scienceBit": "Klimaforscher nennen das das Problem der gesellschaftlichen Akzeptanz – selbst richtige Politik scheitert ohne das Vertrauen der Bevölkerung.",
     "chain": { "left": null, "right": null },
     "trigger": { "metric": "happiness", "below": 20 }
+  },
+  {
+    "id": "trigger-gentrification",
+    "category": "crisis",
+    "situation": "Deine grünen Viertel sind begehrt – zu begehrt. Die Mieten explodieren, Alteingesessene müssen raus. „Grün, aber nicht für uns“, titelt die Zeitung.",
+    "advisor": {
+      "name": "Sofia",
+      "role": "Aktivistin für Wohnrechte",
+      "quote": "Ihr habt die Straßen gekühlt und die Mieten überhitzt. Wer sitzt jetzt eigentlich im Schatten?"
+    },
+    "choices": {
+      "left": { "label": "Der Markt regelt das", "effects": { "heat": 0, "money": 2, "happiness": -3 } },
+      "right": { "label": "Mietbremse, Sozialquote", "effects": { "heat": 0, "money": -2, "happiness": -1 } }
+    },
+    "scienceBit": "Forschende nennen es grüne Gentrifizierung: Neue Parks können Mieten so stark treiben, dass genau die Menschen wegziehen müssen, die die Kühlung am nötigsten hätten.",
+    "chain": { "left": null, "right": null },
+    "trigger": { "metric": "happiness", "above": 85 }
   }
 ]

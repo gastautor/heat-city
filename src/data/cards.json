@@ -61,7 +61,7 @@
     },
     "choices": {
       "left": { "label": "Ventilatoren schicken", "effects": { "heat": 0, "money": -1, "happiness": 1 } },
-      "right": { "label": "Komplett sanieren", "effects": { "heat": -2, "money": -3, "happiness": 3 } }
+      "right": { "label": "Komplett sanieren", "effects": { "heat": -2, "money": -3, "happiness": 2 } }
     },
     "scienceBit": "Schlecht belüftete Wohnungen können bei einer Hitzewelle 8–10 °C heißer sein als draußen. Alte und sehr junge Menschen trifft es am härtesten – man nennt das die Hitze-Gerechtigkeitslücke.",
     "chain": { "left": null, "right": null },
@@ -146,7 +146,7 @@
     },
     "choices": {
       "left": { "label": "Bestehende Räume nutzen", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
-      "right": { "label": "Kühlräume öffnen", "effects": { "heat": 0, "money": -2, "happiness": 3 } }
+      "right": { "label": "Kühlräume öffnen", "effects": { "heat": 0, "money": -2, "happiness": 2 } }
     },
     "scienceBit": "Bei der Hitzewelle 2003 in Europa waren die meisten der 70.000 zusätzlichen Toten allein zu Hause. Zugängliche kühle Orte retten Leben.",
     "chain": { "left": null, "right": null },
@@ -265,7 +265,7 @@
     },
     "choices": {
       "left": { "label": "Asphalt behalten", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
-      "right": { "label": "Aufreißen, begrünen", "effects": { "heat": -2, "money": -2, "happiness": 3 } }
+      "right": { "label": "Aufreißen, begrünen", "effects": { "heat": -2, "money": -2, "happiness": 2 } }
     },
     "scienceBit": "Asphalt aufreißen und durch Erde und Bäume ersetzen – „Entsiegeln“ – kann die Oberflächentemperatur um über 20 °C senken und lässt Regen versickern statt abfließen.",
     "chain": { "left": null, "right": null },
@@ -316,7 +316,7 @@
     },
     "choices": {
       "left": { "label": "An Investor verkaufen", "effects": { "heat": 2, "money": 3, "happiness": -2 } },
-      "right": { "label": "Gärten genehmigen", "effects": { "heat": -1, "money": -1, "happiness": 3 } }
+      "right": { "label": "Gärten genehmigen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
     },
     "scienceBit": "Gemeinschaftsgärten kühlen ihren Block, sparen Transportwege und schaffen den Zusammenhalt, der Menschen bei Hitzenotlagen aufeinander achten lässt.",
     "chain": { "left": null, "right": null },
@@ -401,10 +401,146 @@
     },
     "choices": {
       "left": { "label": "Abgesperrt lassen", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
-      "right": { "label": "Badestelle eröffnen", "effects": { "heat": -1, "money": -1, "happiness": 3 } }
+      "right": { "label": "Badestelle eröffnen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
     },
     "scienceBit": "Sicherer Zugang zu offenem Wasser bringt an den heißesten Tagen Erleichterung – Städte, die ihre Flüsse zum Baden zurückgewinnen, berichten von deutlich mehr Lebensqualität.",
     "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "car-free-oldtown",
+    "category": "surfaces",
+    "situation": "Die Altstadt im Sommer autofrei machen – mehr Platz für Bäume und Terrassen, weniger Parkplätze?",
+    "advisor": {
+      "name": "Dev",
+      "role": "Ladenbesitzer",
+      "quote": "Meine Kunden kommen mit dem Auto. Sperrst du die Straße, kaufen sie eben draußen im Gewerbegebiet."
+    },
+    "choices": {
+      "left": { "label": "Alles bleibt, wie es ist", "effects": { "heat": 1, "money": 1, "happiness": 1 } },
+      "right": { "label": "Autofreie Sommer-Altstadt", "effects": { "heat": -2, "money": -1, "happiness": -2 } }
+    },
+    "scienceBit": "Weniger Autoverkehr senkt Abwärme und Abgase – und freiwerdende Parkflächen sind oft die einzigen Flächen, auf denen dichte Innenstädte überhaupt noch Bäume pflanzen können.",
+    "chain": { "left": null, "right": "oldtown-verdict" },
+    "trigger": null
+  },
+  {
+    "id": "heat-levy",
+    "category": "surfaces",
+    "situation": "Eine Versiegelungsabgabe einführen: Wer Flächen zubetoniert, zahlt jährlich in einen Hitze-Fonds.",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Endlich Geld, das nicht aus dem Kernhaushalt kommt. Aber die Eigentümer werden dich dafür hassen – vor allem die kleinen."
+    },
+    "choices": {
+      "left": { "label": "Keine Abgabe", "effects": { "heat": 1, "money": -1, "happiness": 0 } },
+      "right": { "label": "Abgabe einführen", "effects": { "heat": -1, "money": 2, "happiness": -2 } }
+    },
+    "scienceBit": "Mehrere deutsche Städte koppeln Gebühren an die versiegelte Fläche – wer entsiegelt, spart. Solche Preissignale entsiegeln messbar mehr Fläche als jeder Appell.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "boulevard-construction",
+    "category": "green",
+    "situation": "Der große Boulevard soll eine grüne Allee werden – aber das heißt: zwei Sommer Baustelle, Staub und Umleitungen.",
+    "advisor": {
+      "name": "Hugo",
+      "role": "Stadtarchitekt",
+      "quote": "Verwandlung ist laut. Zwei Jahre lang bist du die unbeliebteste Person der Stadt – danach die beliebteste."
+    },
+    "choices": {
+      "left": { "label": "Projekt absagen", "effects": { "heat": 1, "money": 1, "happiness": 1 } },
+      "right": { "label": "Baustelle durchziehen", "effects": { "heat": -1, "money": -2, "happiness": -2 } }
+    },
+    "scienceBit": "Der Umbau einer Straße dauert zwei bis drei Jahre, die Kühlwirkung der Bäume wächst über Jahrzehnte. Städte, die auf den „richtigen Moment“ warten, fangen nie an.",
+    "chain": { "left": null, "right": "boulevard-opening" },
+    "trigger": null
+  },
+  {
+    "id": "water-rationing",
+    "category": "water",
+    "situation": "Dritter Dürresommer in Folge, die Talsperre ist halb leer. Gartenbewässerung und private Pools verbieten?",
+    "advisor": {
+      "name": "Bea",
+      "role": "Leiterin der Wasserwerke",
+      "quote": "Ich kann dir Wasser für Trinkgläser garantieren oder für Rasensprenger – nicht für beides."
+    },
+    "choices": {
+      "left": { "label": "Kein Verbot", "effects": { "heat": 1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Wasser rationieren", "effects": { "heat": 0, "money": 1, "happiness": -2 } }
+    },
+    "scienceBit": "In Dürresommern verbrauchen Gärten und Pools bis zu ein Drittel des städtischen Trinkwassers. Rationierung ist unbeliebt – aber sie wirkt sofort.",
+    "chain": { "left": "reservoir-crisis", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tree-dispute",
+    "category": "green",
+    "situation": "Anwohner der Lindenallee fordern Fällungen: Die alten Bäume nehmen Licht, werfen Laub und heben die Gehwege an.",
+    "advisor": {
+      "name": "Amara",
+      "role": "Stadtbaumpflegerin",
+      "quote": "Diese Bäume sind fünfzig Jahre Kühlung. Die kann ich dir nicht nachbestellen – für kein Geld dieser Welt."
+    },
+    "choices": {
+      "left": { "label": "Bäume fällen", "effects": { "heat": 2, "money": 0, "happiness": 1 } },
+      "right": { "label": "Bäume bleiben", "effects": { "heat": -1, "money": 0, "happiness": -1 } }
+    },
+    "scienceBit": "Ein 50 Jahre alter Baum kühlt so stark wie hunderte Setzlinge. „Ersatzpflanzungen“ brauchen Jahrzehnte, um dieselbe Kronenfläche wieder aufzubauen.",
+    "chain": { "left": "tree-petition", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "parking-fees",
+    "category": "surfaces",
+    "situation": "Parkgebühren verdreifachen und die Einnahmen fest für Stadtbäume und Schatten reservieren?",
+    "advisor": {
+      "name": "Stadtrat Reyes",
+      "role": "Oppositionsführer",
+      "quote": "Du besteuerst den Handwerker, der zur Arbeit fährt, für Bäume, die in zwanzig Jahren Schatten werfen. Viel Glück damit."
+    },
+    "choices": {
+      "left": { "label": "Gebühren lassen", "effects": { "heat": 1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Verdreifachen, zweckbinden", "effects": { "heat": -1, "money": 2, "happiness": -2 } }
+    },
+    "scienceBit": "Ein einziger Parkplatz belegt 12 m² – genug Fläche für einen großen Baum. In vielen Städten finanzieren zweckgebundene Parkgebühren das gesamte Grünprogramm.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "green-roof-mandate",
+    "category": "buildings",
+    "situation": "Eine Satzung verpflichtet alle Neubauten zu Gründach und heller Fassade. Die Bauwirtschaft droht mit Investitionsstopp.",
+    "advisor": {
+      "name": "Herr Brandt",
+      "role": "Bauunternehmer",
+      "quote": "Jede Auflage macht Wohnungen teurer. Das zahlst nicht du – das zahlen die Mieter. Und die wählen dich ab."
+    },
+    "choices": {
+      "left": { "label": "Freiwillig lassen", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Pflicht beschließen", "effects": { "heat": -2, "money": 0, "happiness": -2 } }
+    },
+    "scienceBit": "Basel schreibt Gründächer seit 2002 vor – heute hat die Stadt die höchste Gründachdichte der Welt, ohne dass der Wohnungsbau eingebrochen ist.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "blackout-order",
+    "category": "crisis",
+    "situation": "Hitzespitze, das Netz am Limit. Eine Notverordnung würde Leuchtreklamen abschalten und Klimaanlagen in Büros drosseln.",
+    "advisor": {
+      "name": "Jonas",
+      "role": "Netzbetreiber",
+      "quote": "Entweder du drosselst jetzt kontrolliert – oder das Netz drosselt uns alle. Unkontrolliert."
+    },
+    "choices": {
+      "left": { "label": "Kein Eingriff", "effects": { "heat": 1, "money": 1, "happiness": 1 } },
+      "right": { "label": "Notverordnung erlassen", "effects": { "heat": -1, "money": -1, "happiness": -2 } }
+    },
+    "scienceBit": "Stromausfälle während Hitzewellen sind gefährlicher als die Hitze selbst – ohne Strom fallen Kühlung, Aufzüge und Beatmungsgeräte gleichzeitig aus.",
+    "chain": { "left": "grid-failure", "right": null },
     "trigger": null
   }
 ]
