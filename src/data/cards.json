@@ -542,5 +542,379 @@
     "scienceBit": "Stromausfälle während Hitzewellen sind gefährlicher als die Hitze selbst – ohne Strom fallen Kühlung, Aufzüge und Beatmungsgeräte gleichzeitig aus.",
     "chain": { "left": "grid-failure", "right": null },
     "trigger": null
+  },
+  {
+    "id": "cemetery-park",
+    "category": "green",
+    "situation": "Der alte Friedhof ist die kühlste Fläche der Innenstadt. Ihn tagsüber als stillen Park öffnen?",
+    "advisor": {
+      "name": "Pfarrerin Ruth",
+      "role": "Friedhofsverwaltung",
+      "quote": "Unsere Bänke stehen im Schatten von 150 Jahre alten Linden. Ich habe nichts gegen Besucher – aber Würde braucht Regeln."
+    },
+    "choices": {
+      "left": { "label": "Geschlossen halten", "effects": { "heat": 0, "money": 0, "happiness": 0 } },
+      "right": { "label": "Behutsam öffnen", "effects": { "heat": -1, "money": 0, "happiness": -1 } }
+    },
+    "scienceBit": "Alte Friedhöfe gehören mit ihrem Baumbestand zu den kühlsten Orten vieler Städte – oft 3–4 °C kühler als die Straßen ringsum. Wien und Berlin öffnen sie gezielt als stille Erholungsräume.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "sports-field-turf",
+    "category": "green",
+    "situation": "Der Sportverein will Kunstrasen: bespielbar bei jedem Wetter, kaum Pflege. Im Sommer wird er allerdings glühend heiß.",
+    "advisor": {
+      "name": "Olaf",
+      "role": "Vereinsvorsitzender",
+      "quote": "Naturrasen ist im April Matsch und im August Stroh. Kunstrasen heißt: Unsere Jugend trainiert das ganze Jahr."
+    },
+    "choices": {
+      "left": { "label": "Kunstrasen verlegen", "effects": { "heat": 2, "money": 1, "happiness": 1 } },
+      "right": { "label": "Naturrasen sanieren", "effects": { "heat": -1, "money": -1, "happiness": 0 } }
+    },
+    "scienceBit": "Kunstrasen kann sich in der Sonne auf über 60 °C aufheizen – heißer als Asphalt. Naturrasen bleibt durch Verdunstung oft 20–30 °C kühler.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tiny-forest",
+    "category": "green",
+    "situation": "Eine Schulklasse will auf einer Brachfläche einen „Tiny Forest“ pflanzen – 600 Setzlinge auf der Fläche eines Tennisplatzes.",
+    "advisor": {
+      "name": "Herr Bauer",
+      "role": "Grundschulleiter",
+      "quote": "Die Kinder haben den Pflanzplan selbst gezeichnet. So etwas vergisst ein Kind nie – und die Stadt bekommt einen Wald."
+    },
+    "choices": {
+      "left": { "label": "Fläche freihalten", "effects": { "heat": 1, "money": 0, "happiness": 0 } },
+      "right": { "label": "Pflanzaktion starten", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Tiny Forests nach der Miyawaki-Methode wachsen bis zu zehnmal schneller als klassische Aufforstung und kühlen schon nach wenigen Jahren spürbar ihre Umgebung.",
+    "chain": { "left": null, "right": "tiny-forest-vandalism" },
+    "trigger": null
+  },
+  {
+    "id": "green-tram-tracks",
+    "category": "green",
+    "situation": "Die Straßenbahngleise werden erneuert. Für einen Aufpreis gäbe es Rasengleise statt Schotterbett.",
+    "advisor": {
+      "name": "Grace",
+      "role": "Gewerkschafterin im Nahverkehr",
+      "quote": "Meine Fahrer schwören drauf: leiser, staubfreier – und die Strecke flimmert im Sommer nicht mehr wie eine Herdplatte."
+    },
+    "choices": {
+      "left": { "label": "Schotter wie immer", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Rasengleis verlegen", "effects": { "heat": -1, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Rasengleise können die Oberflächentemperatur der Trasse um bis zu 20 °C senken, dämpfen Lärm und halten Regenwasser zurück.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "sponsor-trees",
+    "category": "green",
+    "situation": "Ein Konzern bietet an, 1.000 Straßenbäume zu bezahlen – wenn an jedem Baum ein Werbeschild hängen darf.",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Geschenkte Bäume sind echtes Geld. Aber du verkaufst damit auch ein Stück Stadtbild – lies das Kleingedruckte."
+    },
+    "choices": {
+      "left": { "label": "Ablehnen", "effects": { "heat": 1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Deal unterschreiben", "effects": { "heat": -2, "money": 1, "happiness": -1 } }
+    },
+    "scienceBit": "Sponsoring kann Grünprogramme beschleunigen – aber Studien zeigen: Sichtbare Kommerzialisierung öffentlicher Räume senkt das Vertrauen in deren Zweck.",
+    "chain": { "left": null, "right": "sponsor-logos" },
+    "trigger": null
+  },
+  {
+    "id": "schoolway-superblock",
+    "category": "surfaces",
+    "situation": "Vor den Grundschulen sollen die Straßen morgens und mittags für Autos gesperrt werden – ein Teil der Eltern protestiert.",
+    "advisor": {
+      "name": "Lena",
+      "role": "Leiterin des Schulnetzwerks",
+      "quote": "Die einen Eltern wollen sichere, kühle Schulwege. Die anderen wollen bis vors Tor fahren. Beide wählen."
+    },
+    "choices": {
+      "left": { "label": "Straßen offen lassen", "effects": { "heat": 1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Schulstraßen einführen", "effects": { "heat": -1, "money": 0, "happiness": -1 } }
+    },
+    "scienceBit": "„Schulstraßen“ senken Abgase, Hitze und Unfälle vor Schulen. Nach einem Jahr befürwortet in Pilotstädten meist eine klare Mehrheit der Eltern die Sperrung.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "mega-development",
+    "category": "surfaces",
+    "situation": "Ein Logistikkonzern will am Stadtrand 40 Hektar versiegeln: Lagerhallen, Parkplätze – und 800 Arbeitsplätze.",
+    "advisor": {
+      "name": "Stadtrat Reyes",
+      "role": "Oppositionsführer",
+      "quote": "Achthundert Jobs schlagen jede Klimakarte. Wer Arbeit hat, erträgt auch Hitze – sag ich jedenfalls im Wahlkampf."
+    },
+    "choices": {
+      "left": { "label": "Genehmigen", "effects": { "heat": 2, "money": 2, "happiness": 1 } },
+      "right": { "label": "Ablehnen", "effects": { "heat": -1, "money": -1, "happiness": -1 } }
+    },
+    "scienceBit": "Große Logistikflächen heizen sich tagsüber massiv auf und geben die Wärme nachts an die Umgebung ab – die Kühlleistung des früheren Acker- und Wiesenlands geht komplett verloren.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "pocket-parks",
+    "category": "surfaces",
+    "situation": "Zwanzig Straßenecken könnten zu Mini-Parks werden: eine Bank, drei Bäume, etwas Grün – dafür fallen Parkplätze weg.",
+    "advisor": {
+      "name": "Frau Adeyemi",
+      "role": "Vorsitzende des Nachbarschaftsvereins",
+      "quote": "Eine Bank im Schatten um die Ecke ist für meine Nachbarin mehr wert als jeder große Park am anderen Ende der Stadt."
+    },
+    "choices": {
+      "left": { "label": "Parkplätze behalten", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
+      "right": { "label": "Mini-Parks bauen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Viele kleine Grünflächen kühlen ein Viertel wirksamer als eine einzige große – entscheidend ist, dass niemand weiter als fünf Minuten bis zum nächsten Schatten geht.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "glare-complaints",
+    "category": "surfaces",
+    "situation": "Beschwerden über den neuen hellen Asphalt: Er blendet in der Mittagssonne wie eine Skipiste.",
+    "advisor": {
+      "name": "Frau Köhler",
+      "role": "Stadtingenieurin",
+      "quote": "Physik ist unbestechlich: Was Sonne reflektiert, reflektiert sie auch in Augen. Es gibt Zwischentöne – die kosten."
+    },
+    "choices": {
+      "left": { "label": "Weiß lassen", "effects": { "heat": 0, "money": 0, "happiness": -1 } },
+      "right": { "label": "Beige nachbessern", "effects": { "heat": 1, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Helle Beläge kühlen, können aber blenden. Neuere „kühle Pigmente“ reflektieren vor allem unsichtbares Infrarot – fast so kühl, ohne Skipisten-Effekt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "drinking-fountains",
+    "category": "water",
+    "situation": "Hundert Trinkbrunnen für die ganze Stadt – kostenlos, öffentlich, immer an?",
+    "advisor": {
+      "name": "Dr. Okafor",
+      "role": "Amtsärztin",
+      "quote": "Dehydrierung ist der stille Anfang jedes Hitzschlags. Ein Brunnen an jeder Ecke ist Gesundheitsvorsorge aus dem Wasserhahn."
+    },
+    "choices": {
+      "left": { "label": "Zu teuer im Unterhalt", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
+      "right": { "label": "Brunnen bauen", "effects": { "heat": 0, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Trinkbrunnen senken nachweislich Hitze-Notfälle – und jeder verhinderte Rettungseinsatz kostet ein Vielfaches eines Brunnen-Jahresunterhalts.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "private-wells",
+    "category": "water",
+    "situation": "Immer mehr Hausbesitzer bohren private Gartenbrunnen, um das Bewässerungsverbot zu umgehen.",
+    "advisor": {
+      "name": "Bea",
+      "role": "Leiterin der Wasserwerke",
+      "quote": "Jeder Brunnen zapft denselben Grundwasserspiegel an – auch den, aus dem unsere Stadtbäume trinken."
+    },
+    "choices": {
+      "left": { "label": "Bohren erlauben", "effects": { "heat": 1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Genehmigungspflicht", "effects": { "heat": -1, "money": 0, "happiness": -2 } }
+    },
+    "scienceBit": "Sinkt der Grundwasserspiegel, vertrocknen zuerst die tief wurzelnden Stadtbäume – genau die, die am meisten kühlen.",
+    "chain": { "left": "dry-trees", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "misting-poles",
+    "category": "water",
+    "situation": "Sprühnebel-Stelen für die Fußgängerzone: feiner Wassernebel, der die gefühlte Temperatur um mehrere Grad senkt.",
+    "advisor": {
+      "name": "Fatima",
+      "role": "Sprecherin der Markthändler",
+      "quote": "Die Kinder lieben's, die Kunden bleiben länger – Paris hat sie an jeder zweiten Ecke. Warum wir nicht?"
+    },
+    "choices": {
+      "left": { "label": "Nicht anschaffen", "effects": { "heat": 0, "money": 0, "happiness": -1 } },
+      "right": { "label": "Stelen installieren", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Verdunstender Sprühnebel kann die gefühlte Temperatur um 5–8 °C senken und braucht dabei erstaunlich wenig Wasser – Technik aus heißen Städten wie Sevilla und Tokio.",
+    "chain": { "left": null, "right": "legionella-scare" },
+    "trigger": null
+  },
+  {
+    "id": "flood-park",
+    "category": "water",
+    "situation": "Ein Retentionspark, der 364 Tage Spielwiese ist – und bei Starkregen Millionen Liter Wasser schluckt.",
+    "advisor": {
+      "name": "Nadia",
+      "role": "Feuchtgebiets-Ökologin",
+      "quote": "Die meisten Tage sieht er aus wie ein ganz normaler Park. An dem einen Tag, an dem er es nicht tut, rettet er den halben Stadtteil."
+    },
+    "choices": {
+      "left": { "label": "Zu teuer", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Park bauen", "effects": { "heat": -2, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "„Schwammstadt“-Parks wie in Kopenhagen fangen Sturzfluten auf und kühlen im Sommer durch Verdunstung – eine Fläche, zwei Schutzfunktionen.",
+    "chain": { "left": null, "right": "storm-test" },
+    "trigger": null
+  },
+  {
+    "id": "school-ac",
+    "category": "buildings",
+    "situation": "Eine Elterninitiative fordert Klimaanlagen für alle Klassenzimmer – sofort, nicht irgendwann.",
+    "advisor": {
+      "name": "Marco, 16",
+      "role": "Sohn eines Fabrikarbeiters",
+      "quote": "In Mathe waren gestern 34 Grad. Ehrlich: Mir doch egal, wie ihr's macht – macht einfach, dass es aufhört."
+    },
+    "choices": {
+      "left": { "label": "Klimaanlagen einbauen", "effects": { "heat": 2, "money": -2, "happiness": 2 } },
+      "right": { "label": "Verschatten und lüften", "effects": { "heat": -1, "money": -1, "happiness": -1 } }
+    },
+    "scienceBit": "Außenjalousien, Nachtlüftung und helle Dächer halten Klassenzimmer oft unter 27 °C – Klimaanlagen kühlen schneller, heizen aber die Straße und fressen Strom.",
+    "chain": { "left": "school-ac-bill", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "heritage-shutters",
+    "category": "buildings",
+    "situation": "Der Denkmalschutz verbietet Außenjalousien und Sonnensegel in der historischen Altstadt. Regeln lockern?",
+    "advisor": {
+      "name": "Frau Vogel",
+      "role": "Denkmalpflegerin",
+      "quote": "Diese Fassaden haben 300 Jahre überstanden. Aluminium-Lamellen sind schnell montiert – und für immer im Stadtbild."
+    },
+    "choices": {
+      "left": { "label": "Denkmalschutz strikt", "effects": { "heat": 1, "money": 0, "happiness": -1 } },
+      "right": { "label": "Lockern, mit Gestaltungsregeln", "effects": { "heat": -1, "money": 0, "happiness": 1 } }
+    },
+    "scienceBit": "Außenliegender Sonnenschutz hält bis zu 90 % der Sonnenwärme ab – innenliegende Vorhänge nur rund ein Drittel. Südeuropäische Altstädte machen es seit Jahrhunderten vor.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "hospital-cooling",
+    "category": "buildings",
+    "situation": "Das Krankenhaus meldet: Auf zwei Stationen steigen die Temperaturen im Sommer über 30 °C – bei den Schwächsten.",
+    "advisor": {
+      "name": "Dr. Okafor",
+      "role": "Amtsärztin",
+      "quote": "Wir behandeln Hitzschlag in Zimmern, die selbst welche verursachen. Das ist kein Betrieb, das ist Ironie."
+    },
+    "choices": {
+      "left": { "label": "Auf Neubau vertrösten", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Stationen nachrüsten", "effects": { "heat": 0, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Überwärmte Krankenzimmer verlängern nachweislich Liegezeiten und erhöhen die Sterblichkeit – Kliniken gehören zu den wichtigsten Orten für Hitzeschutz.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "luxury-tower",
+    "category": "buildings",
+    "situation": "Ein Investor plant einen Glasturm mit Luxuswohnungen: hohe Steuereinnahmen, spiegelnde Südfassade.",
+    "advisor": {
+      "name": "Herr Brandt",
+      "role": "Bauunternehmer",
+      "quote": "Das ist privates Geld, das deine Kassen füllt. Wegen ein bisschen Glas sagt niemand ab – oder?"
+    },
+    "choices": {
+      "left": { "label": "Genehmigen", "effects": { "heat": 1, "money": 2, "happiness": -1 } },
+      "right": { "label": "Nur mit Klimaauflagen", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Gekrümmte Glasfassaden können Sonnenlicht bündeln: Londons „Walkie-Talkie“-Turm schmolz 2013 Autoteile auf der Straße – seither trägt er ein Sonnenschutz-Gitter.",
+    "chain": { "left": "tower-heat", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "cool-biz",
+    "category": "buildings",
+    "situation": "„Cool Biz“ fürs Rathaus: Krawattenpflicht abschaffen, Klimaanlagen erst ab 26 °C – nach japanischem Vorbild.",
+    "advisor": {
+      "name": "Yusuf",
+      "role": "Einkaufsleiter",
+      "quote": "Kostet nichts, spart Strom, und ich darf endlich ohne Sakko in Sitzungen. Wo ist der Haken? Es gibt keinen."
+    },
+    "choices": {
+      "left": { "label": "Etikette bleibt", "effects": { "heat": 0, "money": 0, "happiness": 0 } },
+      "right": { "label": "Cool Biz einführen", "effects": { "heat": -1, "money": 1, "happiness": 0 } }
+    },
+    "scienceBit": "Japans „Cool Biz“-Kampagne spart seit 2005 jährlich Millionen Tonnen CO₂ – allein dadurch, dass Büros weniger kühlen und niemand mehr im Anzug schwitzt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "heat-warning-app",
+    "category": "crisis",
+    "situation": "Ein Hitze-Warnsystem aufbauen: SMS-Warnungen, Lautsprecherdurchsagen, Infotafeln – und regelmäßige Probealarme.",
+    "advisor": {
+      "name": "Frau Steiner",
+      "role": "Leiterin Katastrophenschutz",
+      "quote": "Eine Warnung, die niemand hört, ist keine. Ja, Probealarme nerven – genau daran erkennt man, dass sie funktionieren."
+    },
+    "choices": {
+      "left": { "label": "Pressemitteilung reicht", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
+      "right": { "label": "Warnsystem aufbauen", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Frankreich führte nach der Hitzewelle 2003 ein nationales Warnsystem ein – bei der nächsten vergleichbaren Hitzewelle starben deutlich weniger Menschen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "insurance-hike",
+    "category": "crisis",
+    "situation": "Nach dem dritten Hitzesommer verdoppeln Versicherer die Prämien für Hitzeschäden. Kleinbetriebe geben auf.",
+    "advisor": {
+      "name": "Dev",
+      "role": "Ladenbesitzer",
+      "quote": "Meine Police kostet jetzt mehr als meine Miete. Noch so ein Sommer, und du kannst meinen Laden als Kühlraum nutzen – er steht dann eh leer."
+    },
+    "choices": {
+      "left": { "label": "Markt ist Markt", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Härtefallfonds auflegen", "effects": { "heat": 0, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Versicherer preisen Klimarisiken längst ein: Wo Anpassung fehlt, steigen Prämien – der Hitzeschutz einer Stadt ist damit direkt bares Geld für ihre Betriebe.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "asphalt-plant",
+    "category": "crisis",
+    "situation": "Für die Straßensanierung braucht die Stadt Asphalt. Das lokale Mischwerk ist billig – aber es stinkt und glüht im Sommerbetrieb.",
+    "advisor": {
+      "name": "Carlos",
+      "role": "Bauleiter",
+      "quote": "Kurze Wege, kleiner Preis. Aber stell dich drauf ein, dass das Viertel drumherum jedes Mal die Fenster schließt."
+    },
+    "choices": {
+      "left": { "label": "Lokal und billig", "effects": { "heat": 2, "money": 2, "happiness": -1 } },
+      "right": { "label": "Kühlasphalt von auswärts", "effects": { "heat": 0, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Herkömmlicher Heißasphalt wird bei rund 160 °C verarbeitet. Niedertemperatur-Asphalt spart Energie und Emissionen – und lässt sich sogar nachts einbauen, wenn es kühler ist.",
+    "chain": { "left": "asphalt-smell", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "bike-lanes",
+    "category": "surfaces",
+    "situation": "Eine Autospur der Ringstraße soll zur beschatteten Radachse werden – mit durchgehender Baumreihe.",
+    "advisor": {
+      "name": "Idris",
+      "role": "Gründer einer Energiegenossenschaft",
+      "quote": "Wer im Schatten radelt, lässt das Auto stehen. Weniger Motoren, weniger Abwärme – das System kühlt sich selbst."
+    },
+    "choices": {
+      "left": { "label": "Autospur behalten", "effects": { "heat": 1, "money": 0, "happiness": 1 } },
+      "right": { "label": "Radachse bauen", "effects": { "heat": -2, "money": -1, "happiness": -1 } }
+    },
+    "scienceBit": "Autoverkehr erzeugt doppelte Hitze: Motorabwärme plus dunkler Asphalt. Die meisten Stadtfahrten sind unter fünf Kilometer – genau die Strecken, die schattige Radachsen ersetzen können.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
   }
 ]

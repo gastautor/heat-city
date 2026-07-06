@@ -100,5 +100,141 @@
     "scienceBit": "Ein Blackout während einer Hitzewelle trifft eine Stadt doppelt: Die Kühlung fällt genau dann aus, wenn sie am meisten gebraucht wird. Vorsorge ist billiger als jede Krisenreaktion.",
     "chain": { "left": null, "right": null },
     "trigger": null
+  },
+  {
+    "id": "sponsor-logos",
+    "category": "green",
+    "situation": "Die gesponserten Bäume stehen – samt tausend Werbeschildern. Das Netz spottet über deine „Reklame-Allee“.",
+    "advisor": {
+      "name": "Hugo",
+      "role": "Stadtarchitekt",
+      "quote": "Man sieht das Logo vor dem Baum. Genau andersherum war es gedacht."
+    },
+    "choices": {
+      "left": { "label": "Vertrag ist Vertrag", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Kleine Plaketten nachverhandeln", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Akzeptanzforschung zeigt: Menschen unterstützen Stadtgrün stärker, wenn es als Gemeingut erscheint – nicht als Werbefläche.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "school-ac-bill",
+    "category": "buildings",
+    "situation": "Erster Hitzemonat mit Schul-Klimaanlagen: Die Stromrechnung sprengt das Budget, und zweimal fiel im Viertel das Netz aus.",
+    "advisor": {
+      "name": "Jonas",
+      "role": "Netzbetreiber",
+      "quote": "Dreihundert Anlagen, die gleichzeitig anspringen, sind für das Netz ein Schlag in den Nacken. Das war absehbar."
+    },
+    "choices": {
+      "left": { "label": "Volle Kühlung, koste es", "effects": { "heat": 1, "money": -2, "happiness": 1 } },
+      "right": { "label": "Nur an Extremtagen kühlen", "effects": { "heat": 0, "money": -1, "happiness": -1 } }
+    },
+    "scienceBit": "Klimaanlagen treiben den Spitzenstrombedarf: In heißen Regionen entfällt an Extremtagen bis zur Hälfte der Netzlast aufs Kühlen – und die Abwärme heizt die Straße zusätzlich.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tower-heat",
+    "category": "buildings",
+    "situation": "Die Glasfassade des neuen Turms bündelt die Nachmittagssonne auf den Spielplatz gegenüber. Gemessen: 58 °C.",
+    "advisor": {
+      "name": "Frau Köhler",
+      "role": "Stadtingenieurin",
+      "quote": "Das ist kein Pech, das ist Geometrie. Und Geometrie lässt sich nachrüsten – auf Kosten von irgendwem."
+    },
+    "choices": {
+      "left": { "label": "Pech für den Spielplatz", "effects": { "heat": 1, "money": 0, "happiness": -2 } },
+      "right": { "label": "Nachrüstung durchsetzen", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Spiegelnde Fassaden verschieben Hitze nur – auf Straßen, Plätze und Nachbargebäude. Immer mehr Städte prüfen Blendung und Reflexionswärme schon im Bauantrag.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "storm-test",
+    "category": "water",
+    "situation": "Ein Jahrhundert-Gewitter über der Stadt: Der neue Retentionspark schluckt die Flut – die Keller bleiben trocken.",
+    "advisor": {
+      "name": "Nadia",
+      "role": "Feuchtgebiets-Ökologin",
+      "quote": "Eine Nacht wie diese hat den Park bezahlt. Die Nachbarstadt pumpt heute noch."
+    },
+    "choices": {
+      "left": { "label": "Glück gehabt, weiter", "effects": { "heat": 0, "money": 1, "happiness": 1 } },
+      "right": { "label": "Zwei weitere Parks planen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Kopenhagens Schwammstadt-Plan entstand nach einem einzigen Wolkenbruch mit fast einer Milliarde Euro Schaden. Jeder Retentionspark rechnet sich beim ersten Extremregen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "dry-trees",
+    "category": "green",
+    "situation": "Der Grundwasserspiegel ist gefallen. Entlang der Ausfallstraßen lassen die ersten Stadtbäume die Kronen hängen.",
+    "advisor": {
+      "name": "Amara",
+      "role": "Stadtbaumpflegerin",
+      "quote": "Die Brunnen der Gartenbesitzer trinken meinen Bäumen das Wasser weg. Einer von beiden übersteht diesen Sommer nicht."
+    },
+    "choices": {
+      "left": { "label": "Bäume abschreiben", "effects": { "heat": 2, "money": 0, "happiness": -1 } },
+      "right": { "label": "Tankwagen-Bewässerung", "effects": { "heat": 0, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Ein ausgewachsener Stadtbaum braucht an Hitzetagen mehrere hundert Liter Wasser. Sinkt das Grundwasser, hilft nur noch teures Gießen von Hand – oder der Baum stirbt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "legionella-scare",
+    "category": "water",
+    "situation": "Das Gesundheitsamt warnt: In schlecht gewarteten Sprühnebel-Anlagen können sich Legionellen vermehren.",
+    "advisor": {
+      "name": "Dr. Okafor",
+      "role": "Amtsärztin",
+      "quote": "Kein Grund zur Panik, aber einer zur Wartung. Abschalten ist auch eine Entscheidung – gegen die Abkühlung."
+    },
+    "choices": {
+      "left": { "label": "Stelen abschalten", "effects": { "heat": 1, "money": 0, "happiness": -1 } },
+      "right": { "label": "Wartungsvertrag abschließen", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Mit regelmäßiger Wartung und Trinkwasserqualität gelten Sprühnebel-Anlagen als sicher – die dokumentierten Ausbrüche stammen fast alle aus vernachlässigten Systemen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tiny-forest-vandalism",
+    "category": "green",
+    "situation": "Im Tiny Forest der Schulklasse wurden nachts Dutzende Setzlinge herausgerissen. Die Kinder sind am Boden zerstört.",
+    "advisor": {
+      "name": "Herr Bauer",
+      "role": "Grundschulleiter",
+      "quote": "Sag mir nicht, dass es nur Bäume waren. Für meine Klasse war das ihr Wald."
+    },
+    "choices": {
+      "left": { "label": "Nicht nachpflanzen", "effects": { "heat": 1, "money": 0, "happiness": -1 } },
+      "right": { "label": "Nachpflanzen, Baumpaten suchen", "effects": { "heat": -1, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Grünflächen mit Paten und Nachbarschafts-Beteiligung werden deutlich seltener beschädigt – Bindung schützt besser als jeder Zaun.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "asphalt-smell",
+    "category": "crisis",
+    "situation": "Das Mischwerk fährt Sonderschichten. Das angrenzende Viertel klagt über Gestank, Lärm – und nächtliche Gluthitze.",
+    "advisor": {
+      "name": "Sofia",
+      "role": "Aktivistin für Wohnrechte",
+      "quote": "Ausgerechnet das ärmste Viertel bekommt die heißen Nächte deiner billigen Straßen. Das nennt man Umweltungerechtigkeit."
+    },
+    "choices": {
+      "left": { "label": "Aufträge durchziehen", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Filter und Nachtruhe auflagen", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Industrieanlagen stehen fast immer neben den günstigsten Wohnlagen – Hitze, Lärm und Abgase treffen gebündelt die, die am wenigsten ausweichen können.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
   }
 ]
