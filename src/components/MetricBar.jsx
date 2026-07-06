@@ -14,15 +14,13 @@ export default function MetricBar() {
   return (
     <div className="metricbar">
       <div className="metricbar-status">
-        <span className="brand">☀ HEAT CITY</span>
         <span className="clock">
-          {yearFromCount(cardCount)} · {formatTemp(heat)}
+          {yearFromCount(cardCount)} · <b className="clock-temp">{formatTemp(heat)}</b>
         </span>
       </div>
       <div className="metrics">
         <Metric
           type="heat"
-          value={formatTemp(heat)}
           label="HITZE"
           level={heat / 100}
           color="var(--heat)"
@@ -31,7 +29,6 @@ export default function MetricBar() {
         />
         <Metric
           type="money"
-          value={`${Math.round(money)}%`}
           label="GELD"
           level={money / 100}
           color="var(--money)"
@@ -39,7 +36,6 @@ export default function MetricBar() {
         />
         <Metric
           type="mood"
-          value={`${Math.round(happiness)}%`}
           label="STIMMUNG"
           level={happiness / 100}
           color="var(--positive)"
@@ -50,12 +46,11 @@ export default function MetricBar() {
   )
 }
 
-function Metric({ type, value, label, level, color, flash, pulse }) {
+function Metric({ type, label, level, color, flash, pulse }) {
   const cls = ['metric', flash ? 'flash' : '', pulse ? 'pulse' : ''].filter(Boolean).join(' ')
   return (
     <div className={cls}>
       <MetricGlyph type={type} level={level} color={color} size={54} />
-      <div className="metric-value">{value}</div>
       <div className="metric-label">{label}</div>
     </div>
   )

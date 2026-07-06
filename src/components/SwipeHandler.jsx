@@ -16,8 +16,9 @@ export default function SwipeHandler({ card, onChoose }) {
     if (cardRef.current) cardRef.current.style.transform = `translateX(${tx}px) rotate(${rot}deg)`
   }
   const setOverlays = (x) => {
-    if (rightOv.current) rightOv.current.style.opacity = Math.max(0, Math.min(1, x / 90))
-    if (leftOv.current) leftOv.current.style.opacity = Math.max(0, Math.min(1, -x / 90))
+    // fully solid well before the commit threshold so the choice is readable early
+    if (rightOv.current) rightOv.current.style.opacity = Math.max(0, Math.min(1, x / 45))
+    if (leftOv.current) leftOv.current.style.opacity = Math.max(0, Math.min(1, -x / 45))
   }
 
   const onPointerDown = (e) => {
@@ -76,16 +77,14 @@ export default function SwipeHandler({ card, onChoose }) {
         <CardView card={card} />
 
         <div className="card-ov card-ov-left" ref={leftOv}>
-          <span className="ov-stamp left">{stampWord(card.choices.left.label)}</span>
-          <div className="ov-chip left">
+          <div className="ov-decision left">
             <div className="ov-dir">◀ NACH LINKS</div>
             <div className="ov-action">{card.choices.left.label}</div>
           </div>
         </div>
 
         <div className="card-ov card-ov-right" ref={rightOv}>
-          <span className="ov-stamp right">{stampWord(card.choices.right.label)}</span>
-          <div className="ov-chip right">
+          <div className="ov-decision right">
             <div className="ov-dir">NACH RECHTS ▶</div>
             <div className="ov-action">{card.choices.right.label}</div>
           </div>
@@ -93,18 +92,4 @@ export default function SwipeHandler({ card, onChoose }) {
       </div>
     </div>
   )
-}
-
-// A short decorative stamp word from a choice label. German labels often start
-// with an article, so pick the longest meaningful token instead of the first.
-const STOPWORDS = new Set([
-  'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem',
-  'und', 'oder', 'mit', 'für', 'auf', 'im', 'in', 'zum', 'zur', 'als',
-])
-function stampWord(label) {
-  const words = label.replace(/[^\p{L}\s-]/gu, '').split(/[\s-]+/).filter(Boolean)
-  const meaningful = words.filter((w) => !STOPWORDS.has(w.toLowerCase()))
-  const pool = meaningful.length ? meaningful : words
-  const longest = pool.reduce((a, b) => (b.length > a.length ? b : a), pool[0] || label)
-  return longest.toUpperCase()
 }

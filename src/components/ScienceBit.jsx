@@ -30,7 +30,7 @@ export default function ScienceBit() {
             type="money"
             level={money / 100}
             color="var(--money)"
-            text={pointDeltaText(effects.money)}
+            effect={effects.money}
             good={effects.money > 0}
             bad={effects.money < 0}
           />
@@ -38,7 +38,7 @@ export default function ScienceBit() {
             type="mood"
             level={happiness / 100}
             color="var(--positive)"
-            text={pointDeltaText(effects.happiness)}
+            effect={effects.happiness}
             good={effects.happiness > 0}
             bad={effects.happiness < 0}
           />
@@ -56,12 +56,27 @@ export default function ScienceBit() {
   )
 }
 
-function Delta({ type, level, color, text, good, bad }) {
+function Delta({ type, level, color, text, effect, good, bad }) {
   const cls = good ? 'up-good' : bad ? 'up-bad' : 'flat'
   return (
     <div className="delta">
-      <MetricGlyph type={type} level={level} color={color} size={26} />
-      <div className={`delta-value ${cls}`}>{text}</div>
+      <MetricGlyph type={type} level={level} color={color} size={36} />
+      {text != null ? (
+        <div className={`delta-value ${cls}`}>{text}</div>
+      ) : (
+        <DeltaArrow effect={effect} cls={cls} />
+      )}
+    </div>
+  )
+}
+
+// Direction-only indicator: arrow size grows with the impact (|effect| 1–3).
+function DeltaArrow({ effect, cls }) {
+  if (!effect) return <div className="delta-arrow flat">–</div>
+  const size = 14 + Math.min(Math.abs(effect), 3) * 6
+  return (
+    <div className={`delta-arrow ${cls}`} style={{ fontSize: `${size}px` }}>
+      {effect > 0 ? '▲' : '▼'}
     </div>
   )
 }
@@ -70,10 +85,4 @@ function tempDeltaText(effect) {
   if (effect === 0) return '0°'
   const d = tempDeltaFromEffect(effect)
   return `${effect > 0 ? '+' : '−'}${Math.abs(d).toFixed(1)}°`
-}
-
-function pointDeltaText(effect) {
-  const d = effect * 8
-  if (effect === 0) return '0'
-  return `${effect > 0 ? '+' : '−'}${Math.abs(d)}`
 }
