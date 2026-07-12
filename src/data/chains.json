@@ -236,5 +236,175 @@
     "scienceBit": "Industrieanlagen stehen fast immer neben den günstigsten Wohnlagen – Hitze, Lärm und Abgase treffen gebündelt die, die am wenigsten ausweichen können.",
     "chain": { "left": null, "right": null },
     "trigger": null
+  },
+  {
+    "id": "traffic-new-shops",
+    "category": "surfaces",
+    "situation": "Entlang der neuen Straße wollen sich Geschäfte und Gewerbe ansiedeln.",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Gewerbe an der Straße bringt Steuern. Aber wenn du nichts vorschreibst, wächst hier eine Wüste aus Asphalt und Blechdächern."
+    },
+    "choices": {
+      "left": { "label": "Weitere Gewerbeflächen zulassen", "effects": { "heat": 2, "money": 2, "happiness": 0 } },
+      "right": { "label": "Begrünung vorschreiben", "effects": { "heat": -1, "money": 0, "happiness": 1 } }
+    },
+    "scienceBit": "Gewerbegebiete gehören zu den heißesten Flächen einer Stadt: viel Dach, viel Parkplatz, kaum Grün. Verbindliche Begrünungsvorgaben bremsen die Aufheizung, bevor sie entsteht.",
+    "chain": { "left": "traffic-asphalt-belt", "right": null },
+    "trigger": null
+  },
+  {
+    "id": "traffic-asphalt-belt",
+    "category": "surfaces",
+    "situation": "Die neue Gegend besteht inzwischen fast nur noch aus Asphalt und Blech.",
+    "advisor": {
+      "name": "Amara",
+      "role": "Stadtbaumpflegerin",
+      "quote": "Nachträglich Bäume zwischen Fahrbahnen und Parkplätze zu quetschen, ist teuer und mühsam. Aber es ist die einzige Chance, die Hitze hier je wieder loszuwerden."
+    },
+    "choices": {
+      "left": { "label": "Alles unverändert lassen", "effects": { "heat": 2, "money": 1, "happiness": -1 } },
+      "right": { "label": "Nachträglich Bäume pflanzen", "effects": { "heat": -2, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Nachträgliche Begrünung wirkt, ist aber ein Vielfaches teurer, als Bäume von Anfang an mitzuplanen. Jede Fläche, die man heiß werden lässt, muss man später mühsam wieder abkühlen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "traffic-transit-boom",
+    "category": "surfaces",
+    "situation": "Immer mehr Menschen steigen auf Bus und Bahn um. Die Linien sind voll.",
+    "advisor": {
+      "name": "Grace",
+      "role": "Gewerkschafterin im Nahverkehr",
+      "quote": "Die Leute wollen fahren – gib ihnen mehr Takt und mehr Strecke, und du bekommst noch mehr Autos von der Straße."
+    },
+    "choices": {
+      "left": { "label": "Beim aktuellen Angebot bleiben", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
+      "right": { "label": "Linien weiter ausbauen", "effects": { "heat": -2, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Ein gut ausgebautes Nahverkehrsnetz kann Zehntausende Autofahrten am Tag ersetzen. Weniger Autos bedeuten weniger Abwärme, weniger Abgase und mehr Platz für kühlendes Grün.",
+    "chain": { "left": null, "right": "traffic-freed-lanes" },
+    "trigger": null
+  },
+  {
+    "id": "traffic-freed-lanes",
+    "category": "surfaces",
+    "situation": "Weil so viele umgestiegen sind, werden einige Autospuren kaum noch genutzt.",
+    "advisor": {
+      "name": "Idris",
+      "role": "Gründer einer Energiegenossenschaft",
+      "quote": "Leere Fahrspuren sind verschenkter Raum. Mach Radwege draus – oder Baumreihen. Beides kühlt mehr als eine halbleere Straße."
+    },
+    "choices": {
+      "left": { "label": "Autospuren beibehalten", "effects": { "heat": 1, "money": 0, "happiness": 0 } },
+      "right": { "label": "Fahrradwege anlegen", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Frei gewordene Fahrspuren lassen sich in Radwege oder Grünstreifen umwandeln. So wird aus heißem Asphalt eine kühle, sichere Achse – ohne dass eine einzige Fahrt verloren geht.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "park-new-quarter",
+    "category": "green",
+    "situation": "Auf der verkauften Parkfläche entwickelt sich rasch ein neues Viertel.",
+    "advisor": {
+      "name": "Hugo",
+      "role": "Stadtarchitekt",
+      "quote": "Es läuft – und genau jetzt entscheidet sich, ob das ein Steinquartier wird oder eins, in dem man im Sommer noch atmen kann."
+    },
+    "choices": {
+      "left": { "label": "Weitere Gebäude zulassen", "effects": { "heat": 2, "money": 2, "happiness": -1 } },
+      "right": { "label": "Begrünungspflicht einführen", "effects": { "heat": -1, "money": 0, "happiness": 1 } }
+    },
+    "scienceBit": "Ist ein Park erst einmal angebrochen, folgt oft Bebauung auf Bebauung. Eine frühe Begrünungspflicht ist der einzige verlässliche Weg, wenigstens einen Teil der Kühlung zu retten.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "park-more-popular",
+    "category": "green",
+    "situation": "Der geschützte Park wird immer beliebter – und immer voller.",
+    "advisor": {
+      "name": "Frau Adeyemi",
+      "role": "Vorsitzende des Nachbarschaftsvereins",
+      "quote": "Alle wollen her – das ist schön. Aber tretet ihr die Wiesen platt, ist die kühle Oase bald eine staubige Fläche."
+    },
+    "choices": {
+      "left": { "label": "Freizeitangebote ausbauen", "effects": { "heat": 1, "money": -1, "happiness": 2 } },
+      "right": { "label": "Natur schützen", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Beliebte Parks stehen unter Nutzungsdruck: Verdichteter Boden und plattgetretene Wiesen kühlen schlechter. Ein Gleichgewicht aus Nutzung und geschützten Grünzonen hält die Abkühlung erhalten.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "power-surplus",
+    "category": "buildings",
+    "situation": "Die neuen Solarfelder produzieren an sonnigen Tagen mehr Strom, als die Stadt verbraucht.",
+    "advisor": {
+      "name": "Jonas",
+      "role": "Netzbetreiber",
+      "quote": "Überschuss ist Luxus – aber nur, wenn du ihn festhalten kannst. Speicher ihn, und du hast abends Strom, wenn die Sonne weg und die Klimaanlagen an sind."
+    },
+    "choices": {
+      "left": { "label": "Strom verkaufen", "effects": { "heat": 0, "money": 2, "happiness": 0 } },
+      "right": { "label": "Batteriespeicher bauen", "effects": { "heat": -1, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Solarstrom fällt mittags an, der Kühlbedarf zieht sich bis in den Abend. Batteriespeicher verschieben die Sonnenenergie in die heißen Nachtstunden – und entlasten das Netz genau dann.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "power-price-hike",
+    "category": "buildings",
+    "situation": "Das Gaskraftwerk läuft – doch die Energiepreise steigen und treffen die Haushalte.",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Du kannst die höheren Kosten auffangen oder durchreichen. Das eine reißt ein Loch in die Kasse, das andere in den Geldbeutel deiner Bürger."
+    },
+    "choices": {
+      "left": { "label": "Preise weitergeben", "effects": { "heat": 0, "money": 1, "happiness": -2 } },
+      "right": { "label": "Bürger entlasten", "effects": { "heat": 0, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Fossile Energie macht Städte doppelt verwundbar: Sie heizt das Klima an und schwankt im Preis. Wer sich früh auf eigene erneuerbare Quellen stützt, entkoppelt sich von beidem.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tree-initiative-support",
+    "category": "green",
+    "situation": "Die Pflanzaktion findet enormen Zuspruch – ganze Straßenzüge wollen mitmachen.",
+    "advisor": {
+      "name": "Amara",
+      "role": "Stadtbaumpflegerin",
+      "quote": "Wenn die Begeisterung schon da ist, gieß Öl ins Feuer – nicht Wasser. Weite das Programm aus, solange alle mitziehen."
+    },
+    "choices": {
+      "left": { "label": "Budget begrenzen", "effects": { "heat": 1, "money": 1, "happiness": -1 } },
+      "right": { "label": "Programm ausweiten", "effects": { "heat": -2, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Der wirksamste Zeitpunkt, Stadtgrün auszubauen, ist der, an dem die Bevölkerung es selbst fordert. Solche Fenster der Zustimmung schließen sich schnell wieder.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "tree-initiative-protest",
+    "category": "green",
+    "situation": "Deine Absage empört viele Bürger. Vor dem Rathaus formiert sich Protest.",
+    "advisor": {
+      "name": "Stadtrat Reyes",
+      "role": "Oppositionsführer",
+      "quote": "Du hast Menschen abgewiesen, die Bäume pflanzen wollten. Bäume! Erklär das mal bei der nächsten Wahl – oder red jetzt mit ihnen."
+    },
+    "choices": {
+      "left": { "label": "Proteste ignorieren", "effects": { "heat": 0, "money": 0, "happiness": -3 } },
+      "right": { "label": "Bürgerdialog organisieren", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Klimapolitik scheitert selten an der Technik, meist am Vertrauen. Ein ernst gemeinter Bürgerdialog kann aus Gegnern einer Maßnahme ihre entschiedensten Fürsprecher machen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
   }
 ]

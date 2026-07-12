@@ -66,5 +66,22 @@
     "scienceBit": "Forschende nennen es grüne Gentrifizierung: Neue Parks können Mieten so stark treiben, dass genau die Menschen wegziehen müssen, die die Kühlung am nötigsten hätten.",
     "chain": { "left": null, "right": null },
     "trigger": { "metric": "happiness", "above": 85 }
+  },
+  {
+    "id": "trigger-climate-award",
+    "category": "green",
+    "situation": "Für ihr herausragendes Stadtklima wird die Stadt mit einem nationalen Preis ausgezeichnet – samt Preisgeld.",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Anerkennung und Geld zugleich – selten. Steck es zurück in die Abkühlung, und der Vorsprung wächst weiter. Oder stopf damit andere Löcher."
+    },
+    "choices": {
+      "left": { "label": "Preisgeld für andere Projekte verwenden", "effects": { "heat": 1, "money": 2, "happiness": 0 } },
+      "right": { "label": "In weitere Klimaanpassung investieren", "effects": { "heat": -2, "money": 0, "happiness": 2 } }
+    },
+    "scienceBit": "Sichtbare Erfolge in der Klimaanpassung ziehen Fördergelder, Fachkräfte und Nachahmer an. Wer den Vorsprung wieder investiert, macht aus einem guten Stadtklima einen dauerhaften Standortvorteil.",
+    "chain": { "left": null, "right": null },
+    "trigger": { "metric": "heat", "below": 30 }
   }
 ]

@@ -916,5 +916,294 @@
     "scienceBit": "Autoverkehr erzeugt doppelte Hitze: Motorabwärme plus dunkler Asphalt. Die meisten Stadtfahrten sind unter fünf Kilometer – genau die Strecken, die schattige Radachsen ersetzen können.",
     "chain": { "left": null, "right": null },
     "trigger": null
+  },
+  {
+    "id": "shopping-centre",
+    "category": "buildings",
+    "situation": "Ein Investor möchte auf einer innenstadtnahen Brachfläche ein großes Einkaufszentrum bauen.",
+    "advisor": {
+      "name": "Herr Brandt",
+      "role": "Bauunternehmer",
+      "quote": "Ein Einkaufszentrum bringt Frequenz und Gewerbesteuer. Grüne Wohnungen sehen nett aus – füllen deine Kasse aber viel langsamer."
+    },
+    "choices": {
+      "left": { "label": "Einkaufszentrum genehmigen", "effects": { "heat": 2, "money": 2, "happiness": 0 } },
+      "right": { "label": "Begrünte Wohnanlage planen", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Große Einkaufszentren mit ihren weiten Dächern und Parkflächen sind Hitzeinseln im Kleinen. Kompakte, durchgrünte Wohnquartiere heizen sich deutlich weniger auf und halten Regenwasser zurück.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "rooftop-solar",
+    "category": "buildings",
+    "situation": "Die Stadt besitzt viele ungenutzte Dachflächen auf ihren eigenen Gebäuden.",
+    "advisor": {
+      "name": "Idris",
+      "role": "Gründer einer Energiegenossenschaft",
+      "quote": "Jedes leere Dach ist ein Kraftwerk, das du nicht baust. Belege sie mit Modulen – die Sonne schickt keine Rechnung."
+    },
+    "choices": {
+      "left": { "label": "Dächer unverändert lassen", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Solaranlagen installieren", "effects": { "heat": -1, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Solarmodule auf städtischen Dächern liefern Strom genau dann, wenn die Klimaanlagen am meisten ziehen – und beschatten nebenbei das Dach darunter, das sich sonst stark aufheizt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "new-settlement",
+    "category": "buildings",
+    "situation": "Am Stadtrand wird eine neue Wohnsiedlung geplant. Wie dicht soll gebaut werden?",
+    "advisor": {
+      "name": "Hugo",
+      "role": "Stadtarchitekt",
+      "quote": "Dichter bauen heißt mehr Wohnungen und mehr Steuern. Aber jeder Quadratmeter, den ich versiegle, kommt später als Hitze zurück."
+    },
+    "choices": {
+      "left": { "label": "Hohe Bebauungsdichte zulassen", "effects": { "heat": 2, "money": 2, "happiness": 0 } },
+      "right": { "label": "Mehr Grünflächen einplanen", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Neubaugebiete legen die Hitzebelastung für Jahrzehnte fest. Werden Grünzüge, Bäume und Versickerungsflächen von Anfang an eingeplant, bleibt das Viertel an Hitzetagen mehrere Grad kühler.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "brownfield-park",
+    "category": "green",
+    "situation": "Die Stadt besitzt mehrere brachliegende Industriegelände. Was soll daraus werden?",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Als Gewerbegebiet spült die Fläche Geld in die Kasse. Als Park kostet sie – und kühlt dafür den halben Bezirk. Deine Wahl."
+    },
+    "choices": {
+      "left": { "label": "Gewerbegebiet entwickeln", "effects": { "heat": 2, "money": 3, "happiness": -1 } },
+      "right": { "label": "Stadtpark anlegen", "effects": { "heat": -3, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Entsiegelte Industriebrachen, die zu Parks werden, kühlen ihr Umfeld doppelt – durch Schatten und durch Verdunstung. Aus einer aufgeheizten Betonfläche wird eine Frischluftschneise.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "solar-streetlights",
+    "category": "buildings",
+    "situation": "Ein ganzer Stadtteil braucht neue Straßenlaternen.",
+    "advisor": {
+      "name": "Jonas",
+      "role": "Netzbetreiber",
+      "quote": "Solarlampen kosten mich in der Anschaffung mehr – aber sie hängen nicht am Netz, das im Sommer ohnehin am Anschlag läuft."
+    },
+    "choices": {
+      "left": { "label": "Günstige Standardlampen", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Solarbetriebene Lampen", "effects": { "heat": -1, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Solarbetriebene Leuchten mit eigenem Akku entlasten das Stromnetz genau in den Abendstunden heißer Tage, wenn die Last am höchsten ist – und spielen über ihre Lebensdauer die Mehrkosten wieder ein.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "square-redesign",
+    "category": "green",
+    "situation": "Ein großer, leerer Platz soll neu gestaltet werden.",
+    "advisor": {
+      "name": "Priya",
+      "role": "Veranstaltungsleiterin",
+      "quote": "Ein offener Platz füllt sich mit Märkten, Konzerten, Leben. Zu viele Bäume – und ich kann hier keine Bühne mehr aufbauen."
+    },
+    "choices": {
+      "left": { "label": "Offenen Veranstaltungsplatz schaffen", "effects": { "heat": 1, "money": 1, "happiness": 1 } },
+      "right": { "label": "Viele Bäume pflanzen", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Ein steinerner Platz heizt sich im Hochsommer wie ein Backofen auf. Ein Baumdach senkt die Mittagstemperatur um mehrere Grad – die Kunst ist, Schatten und offene Fläche klug zu mischen.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "pool-hours",
+    "category": "water",
+    "situation": "Die Bevölkerung wünscht sich längere Öffnungszeiten der Freibäder im Sommer.",
+    "advisor": {
+      "name": "Marco, 16",
+      "role": "Sohn eines Fabrikarbeiters",
+      "quote": "Wenn's 35 Grad hat, ist das Freibad der einzige kühle Ort, den wir uns leisten können. Macht doch einfach länger auf."
+    },
+    "choices": {
+      "left": { "label": "Öffnungszeiten beibehalten", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
+      "right": { "label": "Freibäder länger öffnen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Öffentliche Bäder sind an Hitzetagen soziale Kühlräume: Gerade Menschen ohne eigenen Garten oder Klimaanlage finden hier Abkühlung – günstiger als jede Notfallversorgung.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "new-town-hall",
+    "category": "buildings",
+    "situation": "Ein neues Verwaltungsgebäude soll gebaut werden. Wie soll geplant werden?",
+    "advisor": {
+      "name": "Frau Köhler",
+      "role": "Stadtingenieurin",
+      "quote": "Nachhaltig bauen kostet oben drauf – rechnet sich aber über die Betriebskosten. Billig gebaut heißt: In zehn Jahren zahlst du beim Kühlen drauf."
+    },
+    "choices": {
+      "left": { "label": "Kostengünstig bauen", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Nachhaltiges Gebäude errichten", "effects": { "heat": -2, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Ein Gebäude mit Dämmung, Verschattung und begrüntem Dach braucht kaum aktive Kühlung. Die Mehrkosten beim Bau sind meist nach wenigen Jahren durch niedrigere Energiekosten wieder eingespielt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "electric-waste-fleet",
+    "category": "surfaces",
+    "situation": "Die städtische Müllabfuhr soll modernisiert werden.",
+    "advisor": {
+      "name": "Yusuf",
+      "role": "Einkaufsleiter",
+      "quote": "Elektro-Laster kosten in der Anschaffung mehr, aber sie stinken nicht und heizen die Straße nicht auf. Die alten Diesel sind billig – und laut, und schmutzig."
+    },
+    "choices": {
+      "left": { "label": "Alte Fahrzeuge weiter nutzen", "effects": { "heat": 1, "money": 1, "happiness": 0 } },
+      "right": { "label": "Elektrofahrzeuge anschaffen", "effects": { "heat": -1, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Verbrennungsmotoren geben ihre Energie zum Großteil als Abwärme ab und heizen dicht befahrene Straßen zusätzlich auf. Elektrofahrzeuge fahren abgasfrei und deutlich kühler.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "grant-windfall",
+    "category": "green",
+    "situation": "Die Stadt erhält unerwartet hohe Fördergelder. Wofür einsetzen?",
+    "advisor": {
+      "name": "Herr Lindqvist",
+      "role": "Stadtkämmerer",
+      "quote": "Schulden tilgen ist solide und langweilig. In Klimaanpassung stecken ist ein Risiko – das sich an jedem heißen Sommer auszahlt."
+    },
+    "choices": {
+      "left": { "label": "Schulden abbauen", "effects": { "heat": 1, "money": 2, "happiness": 0 } },
+      "right": { "label": "In Klimaanpassung investieren", "effects": { "heat": -2, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Jeder Euro, der in Hitze-Anpassung fließt, spart schätzungsweise rund sechs Euro an späteren Notfall- und Gesundheitskosten. Vorsorge ist die günstigste Form von Haushaltsdisziplin.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "broken-fountain",
+    "category": "water",
+    "situation": "Ein alter Trinkbrunnen mitten im Quartier ist seit Wochen defekt.",
+    "advisor": {
+      "name": "Bea",
+      "role": "Leiterin der Wasserwerke",
+      "quote": "Reparieren kostet, klar. Aber an Hitzetagen ist genau dieser Brunnen für die halbe Nachbarschaft die einzige kostenlose Erfrischung."
+    },
+    "choices": {
+      "left": { "label": "Brunnen stilllegen", "effects": { "heat": 0, "money": 1, "happiness": -1 } },
+      "right": { "label": "Brunnen reparieren", "effects": { "heat": 0, "money": -1, "happiness": 1 } }
+    },
+    "scienceBit": "Frei zugängliches Trinkwasser beugt an Hitzetagen Dehydrierung und Kreislaufzusammenbrüchen vor. Ein funktionierender Brunnen ist billige, wirksame Gesundheitsvorsorge.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "vacant-buildings",
+    "category": "buildings",
+    "situation": "Die Stadt möchte mehrere leerstehende Gebäude wieder nutzen.",
+    "advisor": {
+      "name": "Sofia",
+      "role": "Aktivistin für Wohnrechte",
+      "quote": "Abreißen und neu bauen verschlingt Geld und Rohstoffe. Der Bestand steht schon – macht Wohnungen draus, bevor draußen weiter versiegelt wird."
+    },
+    "choices": {
+      "left": { "label": "Abreißen und neu bauen", "effects": { "heat": 2, "money": -2, "happiness": 0 } },
+      "right": { "label": "Zu Wohnraum umbauen", "effects": { "heat": -1, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "In Bestandsgebäuden steckt bereits „graue Energie“ – die Emissionen ihres Baus. Umnutzung statt Abriss vermeidet neue Emissionen und die Hitze, die eine große Baustelle mit sich bringt.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "market-space",
+    "category": "surfaces",
+    "situation": "Der Wochenmarkt platzt aus allen Nähten und braucht mehr Platz.",
+    "advisor": {
+      "name": "Fatima",
+      "role": "Sprecherin der Markthändler",
+      "quote": "Wir brauchen Fläche, keine Frage. Nur: Nehmt uns bitte den Parkplatz nebenan – nicht die einzige Wiese, die den Platz im Sommer erträglich macht."
+    },
+    "choices": {
+      "left": { "label": "Grünfläche nutzen", "effects": { "heat": 2, "money": 0, "happiness": 0 } },
+      "right": { "label": "Parkplatz nutzen", "effects": { "heat": -1, "money": 0, "happiness": 1 } }
+    },
+    "scienceBit": "Eine begrünte Fläche zu bebauen heißt, an einem heißen Ort die letzte Kühlung zu opfern. Einen versiegelten Parkplatz umzunutzen, kostet dagegen keine einzige Schattenfläche.",
+    "chain": { "left": null, "right": null },
+    "trigger": null
+  },
+  {
+    "id": "commute-traffic",
+    "category": "surfaces",
+    "situation": "Der Berufsverkehr nimmt Jahr für Jahr zu. Die Stadt muss reagieren.",
+    "advisor": {
+      "name": "Grace",
+      "role": "Gewerkschafterin im Nahverkehr",
+      "quote": "Eine neue Straße füllt sich in drei Jahren wieder bis zum Rand. Bau lieber Busse und Bahnen aus – die bewegen mehr Menschen auf weniger Asphalt."
+    },
+    "choices": {
+      "left": { "label": "Neue Straße bauen", "effects": { "heat": 2, "money": -2, "happiness": 1 } },
+      "right": { "label": "Öffentlichen Nahverkehr ausbauen", "effects": { "heat": -2, "money": -2, "happiness": 1 } }
+    },
+    "scienceBit": "Neue Straßen erzeugen neuen Verkehr – Fachleute nennen es „induzierten Verkehr“. Mehr Asphalt und mehr Motoren heizen die Stadt auf, während guter Nahverkehr beides reduziert.",
+    "chain": { "left": "traffic-new-shops", "right": "traffic-transit-boom" },
+    "trigger": null
+  },
+  {
+    "id": "park-investor-offer",
+    "category": "green",
+    "situation": "Ein Investor möchte einen Teil des Stadtparks bebauen – gegen eine hohe Zahlung.",
+    "advisor": {
+      "name": "Herr Brandt",
+      "role": "Bauunternehmer",
+      "quote": "Ein kleines Stück Park gegen ein hübsches Sümmchen für deine Kasse. Den Rest merkt doch keiner – oder?"
+    },
+    "choices": {
+      "left": { "label": "Zustimmung", "effects": { "heat": 2, "money": 3, "happiness": -2 } },
+      "right": { "label": "Ablehnung", "effects": { "heat": 0, "money": -1, "happiness": 2 } }
+    },
+    "scienceBit": "Innerstädtische Parks sind Frischluftinseln, die nachts kühle Luft in die umliegenden Straßen abgeben. Wird der Park angeknabbert, verliert das ganze Viertel an Abkühlung.",
+    "chain": { "left": "park-new-quarter", "right": "park-more-popular" },
+    "trigger": null
+  },
+  {
+    "id": "power-demand",
+    "category": "buildings",
+    "situation": "Die Stadt braucht dringend mehr Strom. Woher soll er kommen?",
+    "advisor": {
+      "name": "Idris",
+      "role": "Gründer einer Energiegenossenschaft",
+      "quote": "Ein Gaskraftwerk ist schnell gebaut und heizt uns doppelt ein: mit Abwärme und mit dem, was es in die Luft bläst. Solar tut weder das eine noch das andere."
+    },
+    "choices": {
+      "left": { "label": "Gaskraftwerk errichten", "effects": { "heat": 2, "money": -1, "happiness": 0 } },
+      "right": { "label": "Solarfelder bauen", "effects": { "heat": -2, "money": -3, "happiness": 1 } }
+    },
+    "scienceBit": "Fossile Kraftwerke geben große Mengen Abwärme ab und befeuern die Erderhitzung, die Hitzewellen erst verschärft. Solarstrom erzeugt Energie ohne lokale Abwärme – am meisten an heißen, sonnigen Tagen.",
+    "chain": { "left": "power-price-hike", "right": "power-surplus" },
+    "trigger": null
+  },
+  {
+    "id": "tree-initiative",
+    "category": "green",
+    "situation": "Eine Bürgerinitiative sammelt Unterschriften für ein großes Baumpflanzprogramm.",
+    "advisor": {
+      "name": "Frau Adeyemi",
+      "role": "Vorsitzende des Nachbarschaftsvereins",
+      "quote": "Die Leute wollen Schatten vor der eigenen Tür und packen selbst mit an. So viel Rückenwind bekommst du selten – nutz ihn."
+    },
+    "choices": {
+      "left": { "label": "Forderung ablehnen", "effects": { "heat": 2, "money": 1, "happiness": -2 } },
+      "right": { "label": "Pflanzprogramm starten", "effects": { "heat": -2, "money": -2, "happiness": 2 } }
+    },
+    "scienceBit": "Von Bürgern getragene Pflanzaktionen wirken doppelt: Die Bäume kühlen, und die Beteiligten pflegen und schützen „ihre“ Bäume oft über Jahre – gepflanzte Bäume überleben so deutlich häufiger.",
+    "chain": { "left": "tree-initiative-protest", "right": "tree-initiative-support" },
+    "trigger": null
   }
 ]
