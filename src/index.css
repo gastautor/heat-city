@@ -191,6 +191,172 @@ body {
   color: rgba(255, 253, 247, 0.78);
 }
 
+/* ===================== INTRO / HOW-TO ===================== */
+
+.intro-screen {
+  flex: 1;
+  background: var(--screen);
+  display: flex;
+  flex-direction: column;
+  padding: 56px 30px 40px;
+  cursor: pointer;
+  user-select: none;
+}
+.intro-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.intro-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: intro-in 0.25s ease both;
+}
+@keyframes intro-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.intro-visual {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+.intro-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+.intro-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink2);
+  text-wrap: pretty;
+}
+
+.intro-minicard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.intro-minicard-inner {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: 22px 18px;
+  width: 170px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.3;
+  transform: rotate(-2deg);
+}
+.intro-arrow {
+  font-size: 20px;
+  color: var(--heat);
+  animation: intro-nudge 1.4s ease-in-out infinite;
+}
+@keyframes intro-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+.intro-arrow:first-child {
+  animation-name: intro-nudge-left;
+}
+@keyframes intro-nudge-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+.intro-metrics {
+  gap: 10px;
+  align-items: stretch;
+}
+.intro-metric {
+  flex: 1;
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.intro-metric-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin: 8px 0 6px;
+}
+.intro-metric-desc {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.intro-years {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 44px;
+  letter-spacing: -0.02em;
+}
+.intro-years-arrow {
+  color: var(--heat);
+}
+
+.intro-footer {
+  text-align: center;
+}
+.intro-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.intro-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hint);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.intro-dot.active {
+  background: var(--ink);
+  transform: scale(1.2);
+}
+.intro-tap {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ===================== METRIC BAR ===================== */
 
 .metricbar {

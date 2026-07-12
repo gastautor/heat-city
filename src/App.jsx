@@ -1,5 +1,6 @@
 import { useGameStore } from './store/gameStore'
 import TitleScreen from './components/TitleScreen'
+import IntroScreen from './components/IntroScreen'
 import MetricBar from './components/MetricBar'
 import SwipeHandler from './components/SwipeHandler'
 import ScienceBit from './components/ScienceBit'
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <div className="app">
       {phase === 'title' && <TitleScreen />}
+      {phase === 'intro' && <IntroScreen />}
       {(phase === 'card' || phase === 'result') && <GameScreen phase={phase} />}
       {phase === 'over' && <EndScreen />}
     </div>

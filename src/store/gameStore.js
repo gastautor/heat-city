@@ -36,7 +36,7 @@ export const useGameStore = create((set, get) => ({
   currentCard: null,
   gameStatus: 'playing', // 'playing' | 'won' | 'lost-heat' | 'lost-money' | 'lost-happiness'
 
-  // UI phase: 'title' | 'card' | 'result' | 'over'
+  // UI phase: 'title' | 'intro' | 'card' | 'result' | 'over'
   phase: 'title',
 
   // For the result beat (shown between cards)
@@ -52,6 +52,8 @@ export const useGameStore = create((set, get) => ({
   // ---- Actions ------------------------------------------------------------
 
   goToTitle: () => set({ phase: 'title' }),
+
+  startIntro: () => set({ phase: 'intro' }),
 
   initGame: () => {
     const deck = initDeck(cards)

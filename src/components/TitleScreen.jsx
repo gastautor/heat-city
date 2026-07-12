@@ -2,10 +2,10 @@ import { useGameStore } from '../store/gameStore'
 import { formatTemp, START } from '../game/metricEngine'
 
 export default function TitleScreen() {
-  const initGame = useGameStore((s) => s.initGame)
+  const startIntro = useGameStore((s) => s.startIntro)
 
   return (
-    <div className="title-screen" onClick={initGame} role="button" tabIndex={0}>
+    <div className="title-screen" onClick={startIntro} role="button" tabIndex={0}>
       <div className="title-top">
         <div className="title-tagline">EIN SPIEL ÜBER EINE STADT, DIE LEBENSWERT BLEIBT</div>
         <svg className="title-logo" width="66" height="66" viewBox="0 0 24 24" aria-hidden="true">
@@ -31,7 +31,7 @@ export default function TitleScreen() {
         <p className="title-lede">
           Du bist Bürgermeister*in. Die Stadt wird jedes Jahr heißer. Jede Entscheidung trägt dazu bei, wie lebenswert sie bleibt.
         </p>
-        <button className="title-start" onClick={initGame}>
+        <button className="title-start" onClick={startIntro}>
           Tippen zum Starten →
         </button>
         <div className="title-meta">
