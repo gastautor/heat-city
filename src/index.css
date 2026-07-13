@@ -71,11 +71,11 @@ body {
   /* Give the column a little breathing room and a card-like edge on desktop. */
   #root {
     align-items: center;
-    padding: 24px 0;
+    padding: 12px 0;
   }
   .app {
     min-height: 0;
-    height: min(860px, calc(100vh - 48px));
+    height: min(860px, calc(100vh - 24px));
     border-radius: 28px;
     box-shadow: 0 30px 60px -22px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.06);
   }
